@@ -1,0 +1,11 @@
+{
+  "exampleMusic": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "mineoutwest:example",
+        "stream": true
+      }
+    ]
+  }
+}

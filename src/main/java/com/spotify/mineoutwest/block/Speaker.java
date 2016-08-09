@@ -4,8 +4,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -19,8 +22,6 @@ public class Speaker extends Block {
     // each instance of your block should have a name that is unique within your mod.  use lower case.
     blockSimple = (Speaker)(new Speaker().setUnlocalizedName("mbe01_block_simple"));
     GameRegistry.registerBlock(blockSimple, "mbe01_block_simple");
-
-    // you don't need to register an item corresponding to the block, GameRegistry.registerBlock does this automatically.
   }
 
   public static void preInitClientOnly() {
@@ -39,11 +40,9 @@ public class Speaker extends Block {
 
 
 
-  public Speaker()
-  {
+  public Speaker() {
     super(Material.ROCK);
     this.setCreativeTab(CreativeTabs.MISC);   // the block will appear on the Blocks tab in creative
-    //this.setRegistryName("mbe01_block_simple");
   }
 
   // the block will render in the SOLID layer.  See http://greyminecraftcoder.blogspot.co.at/2014/12/block-rendering-18.html for more information.

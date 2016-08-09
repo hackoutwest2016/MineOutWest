@@ -1,6 +1,11 @@
 package com.spotify.mineoutwest;
 
+import com.spotify.mineoutwest.block.MyEventHandler;
 import com.spotify.mineoutwest.block.Speaker;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * CommonProxy is used to set up the mod and start it running.  It contains all the code that should run on both the
@@ -15,6 +20,12 @@ public abstract class CommonProxy {
   public void preInit()
   {
     Speaker.preInitCommon();
+
+    ResourceLocation location = new ResourceLocation("mineoutwest", "exampleMusic");
+    SoundEvent event = new SoundEvent(location);
+    GameRegistry.register(event, location);
+
+    MinecraftForge.EVENT_BUS.register(new MyEventHandler(event));
   }
 
   /**
