@@ -1,8 +1,10 @@
 package com.spotify.mineoutwest.block;
 
+import com.google.common.base.Predicate;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
@@ -49,9 +51,9 @@ public class ArtistsCommand implements ICommand {
             return;
         }
 
+        World world = iCommandSender.getEntityWorld();
         String lower = strings[0].toLowerCase();
         if (lower.equals("spawn")) {
-            World world = iCommandSender.getEntityWorld();
             BlockPos worldSpawnPoint = new BlockPos(126, 68, 112);
 
             Artist artist = new Artist(world);
@@ -61,7 +63,21 @@ public class ArtistsCommand implements ICommand {
 
             iCommandSender.addChatMessage(new TextComponentString("Artist spawned at " + (worldSpawnPoint.getX() - 2) + ", " + worldSpawnPoint.getY() + ", " + worldSpawnPoint.getZ()));
         } else if (lower.equals("kill")) {
-            iCommandSender.addChatMessage(new TextComponentString("Artists could not be killed!!"));
+            int nKills = 0;
+            for (Entity entity : world.getEntities(Artist.class, new Predicate<Artist>() {
+                @Override
+                public boolean apply(@Nullable Artist input) {
+                    return true;
+                }
+            })) {
+                entity.onKillCommand();
+                nKills++;
+            }
+            if (nKills > 0) {
+                iCommandSender.addChatMessage(new TextComponentString(nKills + " artists killed."));
+            } else {
+                iCommandSender.addChatMessage(new TextComponentString("No artists found."));
+            }
         } else {
             iCommandSender.addChatMessage(new TextComponentString("Invalid arguments"));
         }
