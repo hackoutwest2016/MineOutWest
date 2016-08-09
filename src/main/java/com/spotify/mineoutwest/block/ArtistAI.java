@@ -6,9 +6,6 @@ import net.minecraft.entity.ai.RandomPositionGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 
-import net.minecraft.entity.EntityCreature;
-import net.minecraft.util.math.Vec3d;
-
 public class ArtistAI extends EntityAIBase
 {
     private final EntityCreature entity;

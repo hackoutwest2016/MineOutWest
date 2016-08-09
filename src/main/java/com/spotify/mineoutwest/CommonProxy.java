@@ -1,10 +1,7 @@
 package com.spotify.mineoutwest;
 
-import com.spotify.mineoutwest.block.Artist;
 import com.spotify.mineoutwest.block.MyEventHandler;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * CommonProxy is used to set up the mod and start it running.  It contains all the code that should run on both the

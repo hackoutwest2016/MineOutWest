@@ -3,9 +3,7 @@ package com.spotify.mineoutwest;
 import java.util.List;
 
 import com.google.common.collect.Lists;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Sounds {
 
