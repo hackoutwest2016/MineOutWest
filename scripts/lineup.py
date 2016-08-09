@@ -8,7 +8,7 @@ def is_safe(s):
     return s.isalnum() and all(ord(c) < 128 for c in s)
 
 def safestr(s):
-    return "".join(x if is_safe(x) else '_' for x in s)
+    return "".join(x if is_safe(x) else '_' for x in s).lower()
 
 def main(ogg_folder, lineup):
     with open(lineup, 'rb') as csvfile:
