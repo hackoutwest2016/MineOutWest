@@ -17,6 +17,8 @@ public class Actions {
         BlockPos worldSpawnPoint = new BlockPos(x, y, z);
         Artist villager = new Artist(world);
         villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
+        villager.setCustomNameTag("M83");
+        villager.setAlwaysRenderNameTag(true);
         world.spawnEntityInWorld(villager);
 
         villager.getArtistAI().setAllowedRect(x-2, y-2, z-2,
