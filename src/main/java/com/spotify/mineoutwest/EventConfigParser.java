@@ -36,7 +36,7 @@ public class EventConfigParser {
 
       int x, y, z;
       if ("linn_".equals(stage)) {
-        x = -172;
+        x = -170;
         y = 72;
         z = 241;
       } else if ("azalea".equals(stage)) {
@@ -46,13 +46,13 @@ public class EventConfigParser {
       } else if ("flamingo".equals(stage)) {
         x = -160;
         y = 72;
-        z = 201;
+        z = 241;
       } else if ("dungen".equals(stage)) {
-        x = -130;
+        x = -140;
         y = 72;
         z = 241;
       } else if ("h_jden".equals(stage)) {
-        x = -2000;
+        x = -180;
         y = 72;
         z = 241;
       } else {
