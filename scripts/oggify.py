@@ -350,6 +350,12 @@ https://open.spotify.com/track/13mxCVFvZhGk55zXo8W879
 https://open.spotify.com/track/2IL2jSIAIoka0Shc5bceVj
 """.split()
 
+def is_safe(s):
+    return s.isalnum() and all(ord(c) < 128 for c in s)
+
+def safestr(s):
+    return "".join(x if is_safe(x) else '_' for x in s).lower()
+
 def downloadPreview(url, path):
     r = requests.get(url, stream=True)
     if r.status_code == 200:
@@ -375,8 +381,8 @@ def main(download_folder):
             artist, track, url = getInfo(m.group(1))
             if not url:
                 continue
-            artist_safe = "".join(x if x.isalnum() else '_' for x in artist)
-            track_safe = "".join(x if x.isalnum() else '_' for x in track)
+            artist_safe = safestr(artist)
+            track_safe = safestr(track)
             try:
                 os.makedirs(os.path.join(download_folder, artist_safe))
             except OSError:
