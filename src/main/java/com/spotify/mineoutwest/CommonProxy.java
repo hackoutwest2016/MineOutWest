@@ -17,6 +17,8 @@ public abstract class CommonProxy {
   public void preInit() {
     Sounds.preInit();
 
+
+
     MinecraftForge.EVENT_BUS.register(new MyEventHandler());
     MinecraftForge.EVENT_BUS.register(new ArtistSpawner());
   }
