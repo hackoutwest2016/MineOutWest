@@ -56,21 +56,12 @@ public class ArtistsCommand implements ICommand {
         if (lower.equals("spawn")) {
             Actions.spawnArtists(world);
         } else if (lower.equals("kill")) {
-            int nKills = 0;
-            for (Entity entity : world.getEntities(Artist.class, new Predicate<Artist>() {
-                @Override
-                public boolean apply(@Nullable Artist input) {
-                    return true;
-                }
-            })) {
-                entity.onKillCommand();
-                nKills++;
-            }
+            int nKills = Actions.killAllArtists(world);
             if (nKills > 0) {
                 iCommandSender.addChatMessage(new TextComponentString(nKills + " artists killed."));
             } else {
                 iCommandSender.addChatMessage(new TextComponentString("No artists found."));
-            }
+            };
         } else {
             iCommandSender.addChatMessage(new TextComponentString("Invalid arguments"));
         }
