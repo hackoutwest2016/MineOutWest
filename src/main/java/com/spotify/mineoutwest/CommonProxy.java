@@ -1,6 +1,6 @@
 package com.spotify.mineoutwest;
 
-import com.spotify.mineoutwest.block.BlockSimple;
+import com.spotify.mineoutwest.block.Speaker;
 
 /**
  * CommonProxy is used to set up the mod and start it running.  It contains all the code that should run on both the
@@ -14,7 +14,7 @@ public abstract class CommonProxy {
    */
   public void preInit()
   {
-    BlockSimple.preInitCommon();
+    Speaker.preInitCommon();
   }
 
   /**

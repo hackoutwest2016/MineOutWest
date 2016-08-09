@@ -7,8 +7,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = ExampleMod.MODID, version = ExampleMod.VERSION)
-public class ExampleMod {
+@Mod(modid = MineOutWest.MODID, version = MineOutWest.VERSION)
+public class MineOutWest {
   public static final String MODID = "mineoutwest";
   public static final String VERSION = "1.0";
 
@@ -33,17 +33,6 @@ public class ExampleMod {
     System.out.println("#############################################");
 
     proxy.init();
-
-    //    Block b = new Block(Material.CACTUS);
-//    b.setCreativeTab(CreativeTabs.MISC);
-//    b.setUnlocalizedName("Hello world!");
-//    b.setRegistryName("helloworldblock");
-
-//    Item item = new Item();
-//    item.setCreativeTab(CreativeTabs.MISC);
-//    item.setRegistryName("helloworlditem");
-//
-//    GameRegistry.register(item);
   }
 
   @EventHandler
