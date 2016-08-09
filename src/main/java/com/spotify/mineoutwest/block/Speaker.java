@@ -1,14 +1,23 @@
 package com.spotify.mineoutwest.block;
 
+import com.spotify.mineoutwest.Sounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -38,11 +47,26 @@ public class Speaker extends Block {
     ModelLoader.setCustomModelResourceLocation(itemBlockSimple, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
   }
 
-
-
   public Speaker() {
     super(Material.ROCK);
     this.setCreativeTab(CreativeTabs.MISC);   // the block will appear on the Blocks tab in creative
+  }
+
+  @Override
+  public IBlockState onBlockPlaced(World world,
+                                   BlockPos pos,
+                                   EnumFacing p_onBlockPlaced_3_,
+                                   float p_onBlockPlaced_4_,
+                                   float p_onBlockPlaced_5_,
+                                   float p_onBlockPlaced_6_,
+                                   int p_onBlockPlaced_7_,
+                                   EntityLivingBase elb) {
+    //System.out.println("Block placed " + pos + " - " + elb + " - " + world + " - " + p_onBlockPlaced_4_ + " - " + p_onBlockPlaced_7_);
+    //EntityPlayer epsp = (EntityPlayer)elb;
+
+    //world.playSound(epsp, pos, Sounds.EXAMPLE, SoundCategory.MASTER, 1, 1);
+
+    return super.onBlockPlaced(world, pos, p_onBlockPlaced_3_, p_onBlockPlaced_4_, p_onBlockPlaced_5_, p_onBlockPlaced_6_, p_onBlockPlaced_7_, elb);
   }
 
   // the block will render in the SOLID layer.  See http://greyminecraftcoder.blogspot.co.at/2014/12/block-rendering-18.html for more information.

@@ -1,11 +1,7 @@
 {
   "exampleMusic": {
     "category": "record",
-    "sounds": [
-      {
-        "name": "mineoutwest:example",
-        "stream": true
-      }
+    "sounds": [{"name": "mineoutwest:example", "stream": true}
     ]
   }
 }

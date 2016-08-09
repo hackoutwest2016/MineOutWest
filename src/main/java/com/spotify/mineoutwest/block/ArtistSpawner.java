@@ -19,18 +19,12 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class ArtistSpawner {
 
-    private final SoundEvent sound;
     private boolean started = false;
     private int counter = 0;
     private BlockPos worldSpawnPoint;
 
-    public ArtistSpawner(SoundEvent sound) {
-        this.sound = sound;
+    public ArtistSpawner() {
     }
-
-    public class Artist extends EntityVillager {
-
-    };
 
     @SubscribeEvent
     public void pickupItem(EntityItemPickupEvent event) {
