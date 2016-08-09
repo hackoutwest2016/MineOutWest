@@ -1,6 +1,7 @@
 package com.spotify.mineoutwest;
 
 import com.spotify.mineoutwest.block.MyEventHandler;
+import com.spotify.mineoutwest.block.ArtistSpawner;
 import com.spotify.mineoutwest.block.Speaker;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
@@ -26,6 +27,7 @@ public abstract class CommonProxy {
     GameRegistry.register(event, location);
 
     MinecraftForge.EVENT_BUS.register(new MyEventHandler(event));
+    MinecraftForge.EVENT_BUS.register(new ArtistSpawner(event));
   }
 
   /**
