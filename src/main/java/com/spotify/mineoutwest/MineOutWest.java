@@ -1,6 +1,7 @@
 package com.spotify.mineoutwest;
 
-import com.spotify.mineoutwest.block.ArtistCommand;
+import com.spotify.mineoutwest.block.Artist;
+import com.spotify.mineoutwest.block.ArtistsCommand;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -8,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 @Mod(modid = MineOutWest.MODID, version = MineOutWest.VERSION)
 public class MineOutWest {
@@ -34,6 +36,10 @@ public class MineOutWest {
     System.out.println("#                 init                      #");
     System.out.println("#############################################");
 
+    int id =0;
+    EntityRegistry.registerModEntity(Artist.class, "Artist", id, this, 80, 1, true);//id is an internal mob id, you can start at 0 and continue adding them up.
+    id++;
+
     proxy.init();
   }
 
@@ -49,7 +55,7 @@ public class MineOutWest {
   @EventHandler
   public void serverLoad(FMLServerStartingEvent event)
   {
-    event.registerServerCommand(new ArtistCommand());
+    event.registerServerCommand(new ArtistsCommand());
   }
 
 }

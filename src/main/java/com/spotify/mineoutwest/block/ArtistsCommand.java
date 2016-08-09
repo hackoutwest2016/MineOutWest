@@ -17,24 +17,24 @@ import java.util.List;
 /**
  * Created by Simon on 2016-08-09.
  */
-public class ArtistCommand implements ICommand {
+public class ArtistsCommand implements ICommand {
 
     private List aliases;
 
-    public ArtistCommand() {
+    public ArtistsCommand() {
         this.aliases = new ArrayList();
-        this.aliases.add("spawnArtists");
-        this.aliases.add("spA");
+        this.aliases.add("artists");
+        this.aliases.add("art");
     }
 
     @Override
     public String getCommandName() {
-        return "spawnArtists";
+        return "artists";
     }
 
     @Override
     public String getCommandUsage(ICommandSender iCommandSender) {
-        return "spawnArtists";
+        return "artists [spawn|kill]";
     }
 
     @Override
@@ -44,20 +44,27 @@ public class ArtistCommand implements ICommand {
 
     @Override
     public void execute(MinecraftServer minecraftServer, ICommandSender iCommandSender, String[] strings) throws CommandException {
-        if (strings.length != 0) {
+        if (strings.length != 1) {
             iCommandSender.addChatMessage(new TextComponentString("Invalid arguments"));
             return;
         }
 
-        World world = iCommandSender.getEntityWorld();
-        BlockPos worldSpawnPoint = new BlockPos(126, 68, 112);
+        String lower = strings[0].toLowerCase();
+        if (lower.equals("spawn")) {
+            World world = iCommandSender.getEntityWorld();
+            BlockPos worldSpawnPoint = new BlockPos(126, 68, 112);
 
-        EntityVillager villager = new EntityVillager(world);
-        villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
+            Artist artist = new Artist(world);
+            artist.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
 
-        world.spawnEntityInWorld(villager);
+            world.spawnEntityInWorld(artist);
 
-        iCommandSender.addChatMessage(new TextComponentString("Artist spawned at " + (worldSpawnPoint.getX() - 2) + ", " + worldSpawnPoint.getY() + ", " + worldSpawnPoint.getZ()));
+            iCommandSender.addChatMessage(new TextComponentString("Artist spawned at " + (worldSpawnPoint.getX() - 2) + ", " + worldSpawnPoint.getY() + ", " + worldSpawnPoint.getZ()));
+        } else if (lower.equals("kill")) {
+            iCommandSender.addChatMessage(new TextComponentString("Artists could not be killed!!"));
+        } else {
+            iCommandSender.addChatMessage(new TextComponentString("Invalid arguments"));
+        }
     }
 
     @Override
