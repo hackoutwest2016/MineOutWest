@@ -3,6 +3,8 @@ package com.spotify.mineoutwest.block;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.PositionedSoundRecord;
+import net.minecraft.entity.ai.EntityAIBase;
+import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
@@ -35,14 +37,16 @@ public class ArtistSpawner {
     public void foo(WorldEvent.Load event) {
         World world = event.getWorld();
         if (!world.isRemote) {
-            worldSpawnPoint = world.getSpawnPoint();
-        } else {
-            EntityVillager villager = new EntityVillager(world);
-            villager.setLocationAndAngles(worldSpawnPoint.getX() + 2, worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
-            System.out.println("Villager's AI is disbaled: " + villager.isAIDisabled());
+
+            worldSpawnPoint = new BlockPos(126, 68, 112);
+
+            EntityVillager villager = new Artist(world);
+            villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
+
+            villager.forceSpawn = true;
             world.spawnEntityInWorld(villager);
             System.out.println("Villager spawned at " + (worldSpawnPoint.getX() - 2) + ", " + worldSpawnPoint.getY() + ", " + worldSpawnPoint.getZ());
-            System.out.println("Villager's AI is disbaled: " + villager.isAIDisabled());
+
         }
     }
 

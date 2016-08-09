@@ -1,5 +1,11 @@
 package com.spotify.mineoutwest;
 
+import net.minecraft.client.renderer.entity.RenderVillager;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import com.spotify.mineoutwest.block.Artist;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.ModelVillager;
+
 /**
  * ClientProxy is used to set up the mod and start it running on normal minecraft.  It contains all the code that should run on the
  *   client side only.
@@ -20,6 +26,11 @@ public class ClientOnlyProxy extends CommonProxy {
    */
   public void init() {
     super.init();
+
+    RenderingRegistry.registerEntityRenderingHandler(Artist.class,
+            new RenderVillager(Minecraft.getMinecraft().getRenderManager()));
+
+
   }
 
   /**
