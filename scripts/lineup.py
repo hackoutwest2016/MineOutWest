@@ -51,7 +51,7 @@ def main(ogg_folder, lineup):
         events = []
         for event in sorted(tick_events):
             tick, a_id, a_f, stage = event
-            name = "mineoutwest:%s"%(a_f)
+            name = "mineoutwest:%s"%(a_f[0:-4])
             audio[a_id] = {"category": "record", "sounds": [{"name": name, "stream": True}]}
             events.append({"tick": tick, "id": a_id, "stage": stage})
         with open("sounds.json", "wb") as f:

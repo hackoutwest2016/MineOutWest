@@ -20,4 +20,5 @@ To download and convert the necessary music files, and to create the event json 
     $ cd scripts
     $ python oggify.py sounds
     $ python lineup.py sounds lineup.csv
-    $ mv -f sounds.json events.json sounds ../src/main/resources/assets/mineoutwest
+    $ mv -f sounds.json sounds ../src/main/resources/assets/mineoutwest/
+    $ mv -f events.json ../src/main/resources/
