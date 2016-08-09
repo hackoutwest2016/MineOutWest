@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "mineoutwest:blocks/mbe01_block_simple_face0",
+        "up": "mineoutwest:blocks/mbe01_block_simple_face1",
+        "north": "mineoutwest:blocks/mbe01_block_simple_face2",
+        "east": "mineoutwest:blocks/mbe01_block_simple_face5",
+        "south": "mineoutwest:blocks/mbe01_block_simple_face3",
+        "west": "mineoutwest:blocks/mbe01_block_simple_face4",
+        "particle": "blocks/lapis_block"
+    }
+}
