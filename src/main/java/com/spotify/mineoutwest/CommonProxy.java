@@ -2,7 +2,6 @@ package com.spotify.mineoutwest;
 
 import com.spotify.mineoutwest.block.Artist;
 import com.spotify.mineoutwest.block.MyEventHandler;
-import com.spotify.mineoutwest.block.ArtistSpawner;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
