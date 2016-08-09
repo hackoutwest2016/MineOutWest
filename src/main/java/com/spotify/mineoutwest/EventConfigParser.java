@@ -35,23 +35,23 @@ public class EventConfigParser {
       String stage = o.get("stage").getAsString();
 
       int x, y, z;
-      if ("linn_".equals(stage)) {
+      if (stage.startsWith("Linn")) {
         x = -170;
         y = 72;
         z = 241;
-      } else if ("azalea".equals(stage)) {
+      } else if ("Azalea".equals(stage)) {
         x = -150;
         y = 72;
         z = 241;
-      } else if ("flamingo".equals(stage)) {
+      } else if ("Flamingo".equals(stage)) {
         x = -160;
         y = 72;
         z = 241;
-      } else if ("dungen".equals(stage)) {
+      } else if ("Dungen".equals(stage)) {
         x = -140;
         y = 72;
         z = 241;
-      } else if ("h_jden".equals(stage)) {
+      } else if (stage.endsWith("jden")) {
         x = -180;
         y = 72;
         z = 241;
