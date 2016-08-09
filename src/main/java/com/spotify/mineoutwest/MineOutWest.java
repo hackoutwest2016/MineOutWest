@@ -1,11 +1,13 @@
 package com.spotify.mineoutwest;
 
+import com.spotify.mineoutwest.block.ArtistCommand;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = MineOutWest.MODID, version = MineOutWest.VERSION)
 public class MineOutWest {
@@ -44,6 +46,10 @@ public class MineOutWest {
     proxy.postInit();
   }
 
-
+  @EventHandler
+  public void serverLoad(FMLServerStartingEvent event)
+  {
+    event.registerServerCommand(new ArtistCommand());
+  }
 
 }
