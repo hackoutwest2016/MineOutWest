@@ -18,7 +18,6 @@ To download and convert the necessary music files, and to create the event json 
 
     $ brew install ffmpeg --with-libvorbis
     $ cd scripts
-    $ python oggify.py sounds
-    $ python lineup.py sounds lineup.csv
+    $ python lineup.py --lineup lineup.json --sounds sounds --download
     $ mv -f sounds.json sounds ../src/main/resources/assets/mineoutwest/
     $ mv -f events.json ../src/main/resources/

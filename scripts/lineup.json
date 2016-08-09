@@ -1,0 +1,501 @@
+[
+  {
+    "artist": "M83",
+    "day": "torsdag",
+    "stage": "Flamingo",
+    "time": "16.25",
+    "tracks": ["https://open.spotify.com/track/2YxM5vNyhtf7J9PJO1chJ2",
+               "https://open.spotify.com/track/4ndyBbvPdvr0DSiSWOu3XD"]
+  },
+  {
+    "artist": "The Last Shadow Puppets",
+    "day": "torsdag",
+    "stage": "Flamingo",
+    "time": "18.45",
+    "tracks": ["https://open.spotify.com/track/2ZPkY0z7Opko33fHO9VHHV",
+               "https://open.spotify.com/track/5uvIVpDCvC9kTtSjJDbY8C"]
+  },
+  {
+    "artist": "Morrissey",
+    "day": "torsdag",
+    "stage": "Flamingo",
+    "time": "21.15",
+    "tracks": ["https://open.spotify.com/track/0egYMfS7hjEneR86a9K61w",
+               "https://open.spotify.com/track/5zflsn7VI8qyvzrowMoTgF"]
+  },
+  {
+    "artist": "Jason Isbell",
+    "day": "torsdag",
+    "stage": "Azalea",
+    "time": "15.20",
+    "tracks": ["https://open.spotify.com/track/2oeit7YXlSQLwBxSW19Gu0",
+               "https://open.spotify.com/track/0ho6KbJGma0aL3x59zVAfY"]
+  },
+  {
+    "artist": "Chvrches",
+    "day": "torsdag",
+    "stage": "Azalea",
+    "time": "17.40",
+    "tracks": ["https://open.spotify.com/track/17Zi730TMDQlpCtRIhk5U5",
+               "https://open.spotify.com/track/31AyUvMRDvZjyQI1N05lsT"]
+  },
+  {
+    "artist": "The Libertines",
+    "day": "torsdag",
+    "stage": "Azalea",
+    "time": "20.00",
+    "tracks": ["https://open.spotify.com/track/71D4LseR0RADPbyvMeTIHR",
+               "https://open.spotify.com/track/3M0YwlWNPX8cfWQjYsXTpu"]
+  },
+  {
+    "artist": "Basia Bulat",
+    "day": "torsdag",
+    "stage": "Linn\u00e9",
+    "time": "14.30",
+    "tracks": ["https://open.spotify.com/track/307UmwtvdyqU0ZLGZ4efTm",
+               "https://open.spotify.com/track/7yCdFM1GLDi31wFrgE1d1t"]
+  },
+  {
+    "artist": "Daughter",
+    "day": "torsdag",
+    "stage": "Linn\u00e9",
+    "time": "15.50",
+    "tracks": ["https://open.spotify.com/track/6tqzOYuE3lrNVPDgtF3MjM",
+               "https://open.spotify.com/track/3MH3oRNyFb5mNm663xcK7T"]
+  },
+  {
+    "artist": "Laura Mvula",
+    "day": "torsdag",
+    "stage": "Linn\u00e9",
+    "time": "17.15",
+    "tracks": ["https://open.spotify.com/track/1SQMYA7cISWamKpRP3UqnH",
+               "https://open.spotify.com/track/5UKaekWw9wkPts9iORegbP"]
+  },
+  {
+    "artist": "Anna von Hausswolff",
+    "day": "torsdag",
+    "stage": "Linn\u00e9",
+    "time": "18.40",
+    "tracks": ["https://open.spotify.com/track/2AzIOdWnMAvVrKplInZHoB",
+               "https://open.spotify.com/track/76kEf0oIweRqhHvagGmRY4"]
+  },
+  {
+    "artist": "Chelsea Wolfe",
+    "day": "torsdag",
+    "stage": "Linn\u00e9",
+    "time": "20.15",
+    "tracks": ["https://open.spotify.com/track/5hewzVVBCTezV0Rq9owofM",
+               "https://open.spotify.com/track/7FYchDcrtmYNGHJlfYdsOe"]
+  },
+  {
+    "artist": "Kaytranada",
+    "day": "torsdag",
+    "stage": "Linn\u00e9",
+    "time": "21.45",
+    "tracks": ["https://open.spotify.com/track/2qUZliZ9NHUYIAZqRNe6pZ",
+               "https://open.spotify.com/track/33pDmPx2pkJ7JCAQpRDQ9B"]
+  },
+  {
+    "artist": "Ishivu",
+    "day": "torsdag",
+    "stage": "Dungen",
+    "time": "14.00",
+    "tracks": ["https://open.spotify.com/track/4nzK9l4ESFjNC6RYkAE2uM",
+               "https://open.spotify.com/track/6ZEa2VAZ9LzjYS0JRNz0lh"]
+  },
+  {
+    "artist": "TalaBoman (John Talabot & Axel Boman)",
+    "day": "torsdag",
+    "stage": "Dungen",
+    "time": "15.00",
+    "tracks": ["https://open.spotify.com/track/6YlN48klnFY7IVaVAhyNmi",
+               "https://open.spotify.com/track/3RrACfGussrglEDzH8r3x4"]
+  },
+  {
+    "artist": "Paula Temple",
+    "day": "torsdag",
+    "stage": "Dungen",
+    "time": "17.45",
+    "tracks": ["https://open.spotify.com/track/4CanBdgpe7SkperJ9SUoLN",
+               "https://open.spotify.com/track/0KLGSEjKAwzTF7wtjKmXdj"]
+  },
+  {
+    "artist": "Jessie Granqvist",
+    "day": "torsdag",
+    "stage": "Dungen",
+    "time": "19.00",
+    "tracks": []
+  },
+  {
+    "artist": "Kablam",
+    "day": "torsdag",
+    "stage": "Dungen",
+    "time": "20.15",
+    "tracks": ["https://open.spotify.com/track/2pwi7eg2BgrqopNwi2yv5u",
+               "https://open.spotify.com/track/15tNKbnVn3CmU4SFPWQMDE"]
+  },
+  {
+    "artist": "Josefine Hellstr\u00f6m Hansson",
+    "day": "torsdag",
+    "stage": "Dungen",
+    "time": "21.30",
+    "tracks": ["https://open.spotify.com/track/0rPzwnTVRpAES8se9PxjFv",
+               "https://open.spotify.com/track/4gOHKdaZ2EJyntQCG65BFL"]
+  },
+  {
+    "artist": "James Bay",
+    "day": "fredag",
+    "stage": "Flamingo",
+    "time": "15.00",
+    "tracks": ["https://open.spotify.com/track/1KZyVnyptQcPzkx7ELCnZC",
+               "https://open.spotify.com/track/3nnG7AM9QopHVPEuLX3Khk"]
+  },
+  {
+    "artist": "Grace Jones",
+    "day": "fredag",
+    "stage": "Flamingo",
+    "time": "17.20",
+    "tracks": ["https://open.spotify.com/track/3Ljs3vL9GJLEzXJBV8yVxe",
+               "https://open.spotify.com/track/3nkuemN1DlyHYZCk5eZYLn"]
+  },
+  {
+    "artist": "The Tallest Man On Earth",
+    "day": "fredag",
+    "stage": "Flamingo",
+    "time": "19.50",
+    "tracks": ["https://open.spotify.com/track/2VcAgFuGEly1AYUEvHzy0w",
+               "https://open.spotify.com/track/5dulWCZyRqio1YhzwCc4P4"]
+  },
+  {
+    "artist": "PJ Harvey",
+    "day": "fredag",
+    "stage": "Flamingo",
+    "time": "22.30",
+    "tracks": ["https://open.spotify.com/track/1v5GSWojANOM4MJj1GYE1s",
+               "https://open.spotify.com/track/2AxjntkZpEf5Qt7KoiccHI"]
+  },
+  {
+    "artist": "Anderson .Paak & The Free Nationals",
+    "day": "fredag",
+    "stage": "Azalea",
+    "time": "13.45",
+    "tracks": ["https://open.spotify.com/track/0Tovb9LxiQIyKxInGFw3IT",
+               "https://open.spotify.com/track/7gZzWI6yC0Wb8xLcNYoYIg"]
+  },
+  {
+    "artist": "G-Eazy",
+    "day": "fredag",
+    "stage": "Azalea",
+    "time": "16.15",
+    "tracks": ["https://open.spotify.com/track/40YcuQysJ0KlGQTeGUosTC",
+               "https://open.spotify.com/track/0X7y06KlsqnRXI0da0DWc9"]
+  },
+  {
+    "artist": "Zara Larsson",
+    "day": "fredag",
+    "stage": "Azalea",
+    "time": "18.40",
+    "tracks": ["https://open.spotify.com/track/0VzzzYWjBWofMsSB77pDo4",
+               "https://open.spotify.com/track/0CQTJlVR2tPLsZ8mtpY8Cr"]
+  },
+  {
+    "artist": "ANOHNI",
+    "day": "fredag",
+    "stage": "Azalea",
+    "time": "21.00",
+    "tracks": ["https://open.spotify.com/track/17LkgPVD9skzhD3tfbXvWK",
+               "https://open.spotify.com/track/28UYIs4bHvBYqc9YiHqFZd"]
+  },
+  {
+    "artist": "Erik Lundin",
+    "day": "fredag",
+    "stage": "Linn\u00e9",
+    "time": "12.45",
+    "tracks": ["https://open.spotify.com/track/3nrgxv9KvTkwpM68LgSDE8",
+               "https://open.spotify.com/track/6oSnzvS5OxzwxSpkJrak3Z"]
+  },
+  {
+    "artist": "Kamasi Washington",
+    "day": "fredag",
+    "stage": "Linn\u00e9",
+    "time": "15.00",
+    "tracks": ["https://open.spotify.com/track/4xw8UnKYxsiRFjigtQcVAL",
+               "https://open.spotify.com/track/4NfKSsUxmT4rZxOLPSIGdY"]
+  },
+  {
+    "artist": "Julia Holter",
+    "day": "fredag",
+    "stage": "Linn\u00e9",
+    "time": "16.30",
+    "tracks": ["https://open.spotify.com/track/6btUHzFhMcTSRJsB055QAz",
+               "https://open.spotify.com/track/0Eg1fYRfNkdJoKlE6SKrjE"]
+  },
+  {
+    "artist": "Aurora",
+    "day": "fredag",
+    "stage": "Linn\u00e9",
+    "time": "18.00",
+    "tracks": ["https://open.spotify.com/track/21HfUACOv1lgBiYocruoW8",
+               "https://open.spotify.com/track/3qBn2YAFbX16coGmScr7Y5"]
+  },
+  {
+    "artist": "Nicole Saboun\u00e9",
+    "day": "fredag",
+    "stage": "Linn\u00e9",
+    "time": "19.30",
+    "tracks": ["https://open.spotify.com/track/3auBEcdyysm3Nc74V06XPx",
+               "https://open.spotify.com/track/7IMnGsxf6VkLMWs0d7vVLf"]
+  },
+  {
+    "artist": "Hurula",
+    "day": "fredag",
+    "stage": "Linn\u00e9",
+    "time": "21.10",
+    "tracks": ["https://open.spotify.com/track/3xiCMjkPfM0gx3iic21tu8",
+               "https://open.spotify.com/track/4pSXw0z80rx6OvDvUMkdqH"]
+  },
+  {
+    "artist": "Yung Lean",
+    "day": "fredag",
+    "stage": "Linn\u00e9",
+    "time": "23.00",
+    "tracks": ["https://open.spotify.com/track/5SfgEjazmsdFInTrL2KBvs",
+               "https://open.spotify.com/track/4629a9ZJgYXw39hwWQ8c9O"]
+  },
+  {
+    "artist": "PURPURR PURPLE",
+    "day": "fredag",
+    "stage": "Dungen",
+    "time": "12.00",
+    "tracks": ["https://open.spotify.com/track/3UNVt5KPjcMIDx7ft4mtJm",
+               "https://open.spotify.com/track/5ANz3CYavAOihduofALsdn"]
+  },
+  {
+    "artist": "Samo DJ",
+    "day": "fredag",
+    "stage": "Dungen",
+    "time": "13.30",
+    "tracks": ["https://open.spotify.com/track/1aTOkhba9jKOGBthfLSo16",
+               "https://open.spotify.com/track/7oWA4oHP91DohJm7wa3IbT"]
+  },
+  {
+    "artist": "Floating Points",
+    "day": "fredag",
+    "stage": "Dungen",
+    "time": "15.45",
+    "tracks": ["https://open.spotify.com/track/13LqCh4tcyxDJbALYVCN8b",
+               "https://open.spotify.com/track/30sg5TXrB6tgCdvzpvhRg1"]
+  },
+  {
+    "artist": "Jessy Lanza",
+    "day": "fredag",
+    "stage": "Dungen",
+    "time": "17.30",
+    "tracks": []
+  },
+  {
+    "artist": "Sevdaliza",
+    "day": "fredag",
+    "stage": "Dungen",
+    "time": "19.00",
+    "tracks": ["https://open.spotify.com/track/3pghcSNOm4yKqWEghNCIL6",
+               "https://open.spotify.com/track/3ps2drTqdO29miQG4s6kMV"]
+  },
+  {
+    "artist": "Gander/\u00d6rnell",
+    "day": "fredag",
+    "stage": "Dungen",
+    "time": "20.15",
+    "tracks": []
+  },
+  {
+    "artist": "Shakarchi & Stran\u00e9us",
+    "day": "fredag",
+    "stage": "Dungen",
+    "time": "21.45",
+    "tracks": ["https://open.spotify.com/track/7aIIEZi4zigYSc5W4xP2tX",
+               "https://open.spotify.com/track/1TdHsiNlpUzK9mtG36cDIq"]
+  },
+  {
+    "artist": "Jos\u00e9 Gonz\u00e1lez",
+    "day": "fredag",
+    "stage": "H\u00f6jden",
+    "time": "12.30",
+    "tracks": ["https://open.spotify.com/track/11X4Gw3T4hoktVruLgTnm1",
+               "https://open.spotify.com/track/2bdh8ALxBeuvpnuoh37BDn"]
+  },
+  {
+    "artist": "Ane Brun",
+    "day": "l\u00f6rdag",
+    "stage": "Flamingo",
+    "time": "15.10",
+    "tracks": ["https://open.spotify.com/track/3EvVwGhoLn4VmGImDv7auQ",
+               "https://open.spotify.com/track/2NSPLcfjDslsmNhvl1bukj"]
+  },
+  {
+    "artist": "Big Sean",
+    "day": "l\u00f6rdag",
+    "stage": "Flamingo",
+    "time": "17.40",
+    "tracks": ["https://open.spotify.com/track/4w7yrP4RAeeyhfG9nJqQvS",
+               "https://open.spotify.com/track/4E92bmgFiHxvy2SNjXjC3b"]
+  },
+  {
+    "artist": "Seinabo Sey",
+    "day": "l\u00f6rdag",
+    "stage": "Flamingo",
+    "time": "20.15",
+    "tracks": ["https://open.spotify.com/track/0zhNoNKhia3RRFzrmHlml6",
+               "https://open.spotify.com/track/7w5uV8ylvfdyGWpe7hssfW"]
+  },
+  {
+    "artist": "SIA",
+    "day": "l\u00f6rdag",
+    "stage": "Flamingo",
+    "time": "23.00",
+    "tracks": ["https://open.spotify.com/track/27SdWb2rFzO6GWiYDBTD9j",
+               "https://open.spotify.com/track/4VrWlk8IQxevMvERoX08iC"]
+  },
+  {
+    "artist": "Eagles of Death Metal",
+    "day": "l\u00f6rdag",
+    "stage": "Azalea",
+    "time": "14.00",
+    "tracks": ["https://open.spotify.com/track/0YQXMFYxfHNagYPgQvurKH",
+               "https://open.spotify.com/track/1QUVBh5hBzC9nN4Y0ZFR7z"]
+  },
+  {
+    "artist": "Deportees",
+    "day": "l\u00f6rdag",
+    "stage": "Azalea",
+    "time": "16.25",
+    "tracks": ["https://open.spotify.com/track/1lp0bwGX8D31vUybJSiCm8",
+               "https://open.spotify.com/track/1DLAUPQDyMlqgICfshI1Ja"]
+  },
+  {
+    "artist": "Jamie xx",
+    "day": "l\u00f6rdag",
+    "stage": "Azalea",
+    "time": "18.45",
+    "tracks": ["https://open.spotify.com/track/0Sl8C9oeS3b5Kv9bSvTPDr",
+               "https://open.spotify.com/track/5wN0Qf0iHLcWbCugUtQLNp"]
+  },
+  {
+    "artist": "Massive Attack & Young Fathers",
+    "day": "l\u00f6rdag",
+    "stage": "Azalea",
+    "time": "21.40",
+    "tracks": ["https://open.spotify.com/track/67Hna13dNDkZvBpTXRIaOJ",
+               "https://open.spotify.com/track/0DRe2MeIAT5Bf1kOhRPJ4H"]
+  },
+  {
+    "artist": "Daniel Norgren",
+    "day": "l\u00f6rdag",
+    "stage": "Linn\u00e9",
+    "time": "12.45",
+    "tracks": ["https://open.spotify.com/track/2zojH99hHY6Xl0cxeFkj7o",
+               "https://open.spotify.com/track/6zYpKWiF0Q1SNQGKHLrUfD"]
+  },
+  {
+    "artist": "Beth Orton",
+    "day": "l\u00f6rdag",
+    "stage": "Linn\u00e9",
+    "time": "14.45",
+    "tracks": ["https://open.spotify.com/track/5fZCHpce0NM7YCXdrZKnFZ",
+               "https://open.spotify.com/track/5QyQ6um0y3LPjnCiN73Pgo"]
+  },
+  {
+    "artist": "Jack Garratt",
+    "day": "l\u00f6rdag",
+    "stage": "Linn\u00e9",
+    "time": "16.30",
+    "tracks": ["https://open.spotify.com/track/6vRp1EGkh1SE7uGNhbqVjT",
+               "https://open.spotify.com/track/5poLHHu5UKTtnbE3TjLxak"]
+  },
+  {
+    "artist": "Descendents",
+    "day": "l\u00f6rdag",
+    "stage": "Linn\u00e9",
+    "time": "18.00",
+    "tracks": ["https://open.spotify.com/track/1MPEPvmX18S9MK4RlMKIst",
+               "https://open.spotify.com/track/5XXiK8GZjjmCHpBpUEm9z5"]
+  },
+  {
+    "artist": "Stormzy",
+    "day": "l\u00f6rdag",
+    "stage": "Linn\u00e9",
+    "time": "19.30",
+    "tracks": ["https://open.spotify.com/track/4P3L9MQSsM5OMtQjEaYt0I",
+               "https://open.spotify.com/track/5qcSy70d147M9uFynKgDgl"]
+  },
+  {
+    "artist": "Travi$ Scott",
+    "day": "l\u00f6rdag",
+    "stage": "Linn\u00e9",
+    "time": "20.50",
+    "tracks": ["https://open.spotify.com/track/1wHZx0LgzFHyeIZkUydNXq",
+               "https://open.spotify.com/track/51EC3I1nQXpec4gDk0mQyP"]
+  },
+  {
+    "artist": "Skepta",
+    "day": "l\u00f6rdag",
+    "stage": "Linn\u00e9",
+    "time": "23.00",
+    "tracks": ["https://open.spotify.com/track/2RmherZdlF6lXsA47ELmY9",
+               "https://open.spotify.com/track/2R8binPTSDj38hAAIIODLX"]
+  },
+  {
+    "artist": "Mai Nestor",
+    "day": "l\u00f6rdag",
+    "stage": "Dungen",
+    "time": "12.00",
+    "tracks": ["https://open.spotify.com/track/0q1FA006kmvRR38Ymdpspt"]
+  },
+  {
+    "artist": "Audur",
+    "day": "l\u00f6rdag",
+    "stage": "Dungen",
+    "time": "14.15",
+    "tracks": ["https://open.spotify.com/track/6W4ElIBmlH3F60JYUq0DmX"]
+  },
+  {
+    "artist": "Nao",
+    "day": "l\u00f6rdag",
+    "stage": "Dungen",
+    "time": "15.45",
+    "tracks": ["https://open.spotify.com/track/4Iam3vZMJCMltFkK9mNruw",
+               "https://open.spotify.com/track/2LcbfZtNRt3HQNGj1pEpBb"]
+  },
+  {
+    "artist": "Mura Masa",
+    "day": "l\u00f6rdag",
+    "stage": "Dungen",
+    "time": "17.15",
+    "tracks": ["https://open.spotify.com/track/79nopNMm3rJSUfQfMkG0Ur",
+               "https://open.spotify.com/track/4DmjHCRymTq4eCUkWAUGZs"]
+  },
+  {
+    "artist": "Kenton Slash Demon",
+    "day": "l\u00f6rdag",
+    "stage": "Dungen",
+    "time": "18.30",
+    "tracks": ["https://open.spotify.com/track/4NZ49ou8OhP8AIlmFmmNUu",
+               "https://open.spotify.com/track/2sJJZQLZXFR5Smq2EVczbi"]
+  },
+  {
+    "artist": "Toxe",
+    "day": "l\u00f6rdag",
+    "stage": "Dungen",
+    "time": "20.15",
+    "tracks": ["https://open.spotify.com/track/00ixI0fRvOuSybl5ltQS4T",
+               "https://open.spotify.com/track/2OjpUNTChdSo88YXByzkoZ"]
+  },
+  {
+    "artist": "Johanna Knutsson",
+    "day": "l\u00f6rdag",
+    "stage": "Dungen",
+    "time": "21.45",
+    "tracks": ["https://open.spotify.com/track/0yN7vCnJeDtbnvZjR81C2M",
+               "https://open.spotify.com/track/402lUxRv0m3VeaCkUoA4Kb"]
+  }
+]
