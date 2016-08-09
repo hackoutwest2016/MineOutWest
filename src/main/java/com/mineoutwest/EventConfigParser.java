@@ -1,4 +1,4 @@
-package com.spotify.mineoutwest;
+package com.mineoutwest;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

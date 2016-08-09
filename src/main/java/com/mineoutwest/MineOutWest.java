@@ -1,7 +1,7 @@
-package com.spotify.mineoutwest;
+package com.mineoutwest;
 
-import com.spotify.mineoutwest.block.Artist;
-import com.spotify.mineoutwest.block.ArtistsCommand;
+import com.mineoutwest.block.Artist;
+import com.mineoutwest.block.ArtistsCommand;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -18,7 +18,7 @@ public class MineOutWest {
 
 
   // Says where the client and server 'proxy' code is loaded.
-  @SidedProxy(clientSide="com.spotify.mineoutwest.ClientOnlyProxy", serverSide="com.spotify.mineoutwest.DedicatedServerProxy")
+  @SidedProxy(clientSide="com.mineoutwest.ClientOnlyProxy", serverSide="com.mineoutwest.DedicatedServerProxy")
   public static CommonProxy proxy;
 
   @EventHandler

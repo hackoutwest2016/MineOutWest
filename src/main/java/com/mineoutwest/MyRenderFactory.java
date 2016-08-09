@@ -1,4 +1,4 @@
-package com.spotify.mineoutwest;
+package com.mineoutwest;
 
 /**
  * Created by ludde on 2016-08-09.

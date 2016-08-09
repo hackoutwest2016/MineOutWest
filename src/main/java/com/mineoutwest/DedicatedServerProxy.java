@@ -1,27 +1,18 @@
-package com.spotify.mineoutwest;
-
-import com.spotify.mineoutwest.block.Artist;
-import net.minecraft.client.renderer.entity.RenderVillager;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
-
+package com.mineoutwest;
 
 /**
- * ClientProxy is used to set up the mod and start it running on normal minecraft.  It contains all the code that should run on the
- *   client side only.
+ * DedicatedServerProxy is used to set up the mod and start it running on dedicated servers.  It contains all the code that should run on the
+ *   dedicated servers.  This is almost never required.
  *   For more background information see here http://greyminecraftcoder.blogspot.com/2013/11/how-forge-starts-up-your-code.html
  */
-public class ClientOnlyProxy extends CommonProxy {
+public class DedicatedServerProxy extends CommonProxy
+{
 
   /**
    * Run before anything else. Read your config, create blocks, items, etc, and register them with the GameRegistry
    */
   public void preInit() {
     super.preInit();
-
-
-    RenderingRegistry.registerEntityRenderingHandler(Artist.class,
-            new MyRenderFactory(RenderVillager.class));
-
   }
 
   /**
@@ -30,10 +21,6 @@ public class ClientOnlyProxy extends CommonProxy {
    */
   public void init() {
     super.init();
-
-
-
-
   }
 
   /**
@@ -43,3 +30,4 @@ public class ClientOnlyProxy extends CommonProxy {
     super.postInit();
   }
 }
+

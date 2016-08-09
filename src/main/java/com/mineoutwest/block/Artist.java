@@ -1,4 +1,4 @@
-package com.spotify.mineoutwest.block;
+package com.mineoutwest.block;
 
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.world.World;

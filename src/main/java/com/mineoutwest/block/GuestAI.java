@@ -1,4 +1,4 @@
-package com.spotify.mineoutwest.block;
+package com.mineoutwest.block;
 
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAIBase;
@@ -6,7 +6,20 @@ import net.minecraft.entity.ai.RandomPositionGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 
-public class ArtistAI extends EntityAIBase
+import net.minecraft.entity.EntityCreature;
+import net.minecraft.util.math.Vec3d;
+
+/* Guest AI overview:
+- Has a list of concerts that it wants to go to at certain times.
+- In between those times, there's a certain chance they'll change scene or go to bar or toilet.
+- At a concert - try to move forwards a bit.
+- At a concert - face the stage.
+ */
+
+
+
+
+public class GuestAI extends EntityAIBase
 {
     private final EntityCreature entity;
     private double xPosition;
@@ -21,12 +34,12 @@ public class ArtistAI extends EntityAIBase
 
     private int mAlwaysFacePitch = -1, mAlwaysFaceYaw;
 
-    public ArtistAI(EntityCreature creatureIn, double speedIn)
+    public GuestAI(EntityCreature creatureIn, double speedIn)
     {
         this(creatureIn, speedIn, 120);
     }
 
-    public ArtistAI(EntityCreature creatureIn, double speedIn, int chance)
+    public GuestAI(EntityCreature creatureIn, double speedIn, int chance)
     {
         this.entity = creatureIn;
         this.speed = speedIn;

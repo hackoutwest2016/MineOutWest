@@ -1,9 +1,9 @@
-package com.spotify.mineoutwest.block;
+package com.mineoutwest.block;
 
 
 import java.util.List;
 
-import com.spotify.mineoutwest.Sounds;
+import com.mineoutwest.Sounds;
 import net.minecraft.util.SoundCategory;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;

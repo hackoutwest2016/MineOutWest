@@ -1,6 +1,6 @@
-package com.spotify.mineoutwest;
+package com.mineoutwest;
 
-import com.spotify.mineoutwest.block.MyEventHandler;
+import com.mineoutwest.block.MyEventHandler;
 import net.minecraftforge.common.MinecraftForge;
 
 /**

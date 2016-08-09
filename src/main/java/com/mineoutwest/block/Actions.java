@@ -1,9 +1,8 @@
-package com.spotify.mineoutwest.block;
+package com.mineoutwest.block;
 
 import com.google.common.base.Predicate;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
