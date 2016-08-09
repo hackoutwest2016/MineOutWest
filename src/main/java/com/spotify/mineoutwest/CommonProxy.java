@@ -2,7 +2,6 @@ package com.spotify.mineoutwest;
 
 import com.spotify.mineoutwest.block.MyEventHandler;
 import com.spotify.mineoutwest.block.ArtistSpawner;
-import com.spotify.mineoutwest.block.Speaker;
 import net.minecraftforge.common.MinecraftForge;
 
 /**
@@ -15,10 +14,7 @@ public abstract class CommonProxy {
   /**
    * Run before anything else. Read your config, create blocks, items, etc, and register them with the GameRegistry
    */
-  public void preInit()
-  {
-    Speaker.preInitCommon();
-
+  public void preInit() {
     Sounds.preInit();
 
     MinecraftForge.EVENT_BUS.register(new MyEventHandler());

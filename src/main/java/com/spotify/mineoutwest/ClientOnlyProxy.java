@@ -1,7 +1,5 @@
 package com.spotify.mineoutwest;
 
-import com.spotify.mineoutwest.block.Speaker;
-
 /**
  * ClientProxy is used to set up the mod and start it running on normal minecraft.  It contains all the code that should run on the
  *   client side only.
@@ -14,8 +12,6 @@ public class ClientOnlyProxy extends CommonProxy {
    */
   public void preInit() {
     super.preInit();
-
-    Speaker.preInitClientOnly();
   }
 
   /**
