@@ -36,25 +36,25 @@ public class EventConfigParser {
 
       int x, y, z;
       if (stage.startsWith("Linn")) {
-        x = -170;
-        y = 72;
-        z = 241;
+        x = 75;
+        y = 66;
+        z = 335;
       } else if ("Azalea".equals(stage)) {
-        x = -150;
-        y = 72;
-        z = 241;
+        x = 122;
+        y = 75;
+        z = 118;
       } else if ("Flamingo".equals(stage)) {
-        x = -160;
-        y = 72;
-        z = 241;
+        x = 140;
+        y = 65;
+        z = 212;
       } else if ("Dungen".equals(stage)) {
-        x = -140;
-        y = 72;
-        z = 241;
+        x = 161;
+        y = 65;
+        z = 43;
       } else if (stage.endsWith("jden")) {
-        x = -180;
-        y = 72;
-        z = 241;
+        x = 150;
+        y = 66;
+        z = 220;
       } else {
         throw new RuntimeException("Unknwon stage: " + stage);
       }
