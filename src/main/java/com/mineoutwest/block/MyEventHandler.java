@@ -18,7 +18,7 @@ public class MyEventHandler {
       if (worldTime > 0) {
         List<Sounds.ScheduledSound> sounds = Sounds.getScheduledSound(worldTime);
         for (Sounds.ScheduledSound sound : sounds) {
-          event.world.playSound(null, sound.getX(), sound.getY(), sound.getZ(), sound.getEvent(), SoundCategory.MASTER, 4, 1);
+          event.world.playSound(null, sound.getX(), sound.getY(), sound.getZ(), sound.getEvent(), SoundCategory.MASTER, 5, 1);
           System.out.println("Started sound " + sound + " at " + worldTime);
         }
       }
