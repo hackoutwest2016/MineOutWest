@@ -3,6 +3,7 @@ package com.spotify.mineoutwest.block;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.RandomPositionGenerator;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 
 import net.minecraft.entity.EntityCreature;
@@ -18,6 +19,11 @@ public class ArtistAI extends EntityAIBase
     private int executionChance;
     private boolean mustUpdate;
 
+    private int mMinX = -1, mMinY, mMinZ;
+    private int mMaxX, mMaxY, mMaxZ;
+
+    private int mAlwaysFacePitch = -1, mAlwaysFaceYaw;
+
     public ArtistAI(EntityCreature creatureIn, double speedIn)
     {
         this(creatureIn, speedIn, 120);
@@ -27,8 +33,23 @@ public class ArtistAI extends EntityAIBase
     {
         this.entity = creatureIn;
         this.speed = speedIn;
-        this.executionChance = chance;
+        this.executionChance = 10;//chance;
         this.setMutexBits(1);
+    }
+
+    public void setAllowedRect(int minX, int minY, int minZ, int maxX, int maxY, int maxZ) {
+        mMinX = minX;
+        mMinY = minY;
+        mMinZ = minZ;
+        mMaxX = maxX;
+        mMaxY = maxY;
+        mMaxZ = maxZ;
+    }
+
+    public double clamp(double v, double min, double max) {
+        if (v < min) v = min;
+        else if (v > max) v = max;
+        return v;
     }
 
     /**
@@ -57,9 +78,15 @@ public class ArtistAI extends EntityAIBase
         }
         else
         {
-            this.xPosition = vec3d.xCoord;
-            this.yPosition = vec3d.yCoord;
-            this.zPosition = vec3d.zCoord;
+            if (mMinX >= 0) {
+                this.xPosition = clamp(vec3d.xCoord, mMinX, mMaxX);
+                this.yPosition = clamp(vec3d.yCoord, mMinY, mMaxY);
+                this.zPosition = clamp(vec3d.zCoord, mMinZ, mMaxZ);
+            } else {
+                this.xPosition = vec3d.xCoord;
+                this.yPosition = vec3d.yCoord;
+                this.zPosition = vec3d.zCoord;
+            }
             this.mustUpdate = false;
             return true;
         }
@@ -70,7 +97,11 @@ public class ArtistAI extends EntityAIBase
      */
     public boolean continueExecuting()
     {
-        return !this.entity.getNavigator().noPath();
+        if (!this.entity.getNavigator().noPath())
+            return true;
+        BlockPos pos = entity.getPosition();
+        entity.setLocationAndAngles(pos.getX(), pos.getY(), pos.getZ(), 0, 0);
+        return false;
     }
 
     /**

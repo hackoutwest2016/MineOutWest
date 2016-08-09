@@ -8,10 +8,15 @@ public class Artist extends EntityVillager {
         super(world);
 
 
-
-
     }
 
+    @Override
+    protected void initEntityAI() {
+        mArtistAI = new ArtistAI(this, 0.6D);
+        this.tasks.addTask(1, mArtistAI);
+    }
 
+    public ArtistAI getArtistAI() { return mArtistAI; }
 
+    ArtistAI mArtistAI;
 };

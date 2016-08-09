@@ -54,14 +54,7 @@ public class ArtistsCommand implements ICommand {
         World world = iCommandSender.getEntityWorld();
         String lower = strings[0].toLowerCase();
         if (lower.equals("spawn")) {
-            BlockPos worldSpawnPoint = new BlockPos(126, 68, 112);
-
-            Artist artist = new Artist(world);
-            artist.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
-
-            world.spawnEntityInWorld(artist);
-
-            iCommandSender.addChatMessage(new TextComponentString("Artist spawned at " + (worldSpawnPoint.getX() - 2) + ", " + worldSpawnPoint.getY() + ", " + worldSpawnPoint.getZ()));
+            Actions.spawnArtists(world);
         } else if (lower.equals("kill")) {
             int nKills = 0;
             for (Entity entity : world.getEntities(Artist.class, new Predicate<Artist>() {

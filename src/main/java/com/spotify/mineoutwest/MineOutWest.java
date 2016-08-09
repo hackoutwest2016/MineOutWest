@@ -36,7 +36,7 @@ public class MineOutWest {
     System.out.println("#                 init                      #");
     System.out.println("#############################################");
 
-    int id =0;
+    int id =1;
     EntityRegistry.registerModEntity(Artist.class, "Artist", id, this, 80, 1, true);//id is an internal mob id, you can start at 0 and continue adding them up.
     id++;
 

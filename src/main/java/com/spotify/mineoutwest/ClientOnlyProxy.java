@@ -5,6 +5,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import com.spotify.mineoutwest.block.Artist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelVillager;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 /**
  * ClientProxy is used to set up the mod and start it running on normal minecraft.  It contains all the code that should run on the
@@ -18,6 +19,11 @@ public class ClientOnlyProxy extends CommonProxy {
    */
   public void preInit() {
     super.preInit();
+
+
+    RenderingRegistry.registerEntityRenderingHandler(Artist.class,
+            new MyRenderFactory(RenderVillager.class));
+
   }
 
   /**
@@ -27,8 +33,7 @@ public class ClientOnlyProxy extends CommonProxy {
   public void init() {
     super.init();
 
-    RenderingRegistry.registerEntityRenderingHandler(Artist.class,
-            new RenderVillager(Minecraft.getMinecraft().getRenderManager()));
+
 
 
   }
