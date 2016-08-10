@@ -68,6 +68,7 @@ public class Stages {
         public Area stage;
         public Area crowd;
         public int FACING;
+        public double STAGEMOVEMENT;
 
         public Stage(String name,
             BlockPos front_left,
@@ -78,11 +79,12 @@ public class Stages {
             BlockPos crowd_fr,
             BlockPos crowd_bl,
             BlockPos crowd_br,
-            int facing) {
+            int facing, double stagemovement) {
             NAME = name;
             stage = new Area(front_left, front_right, back_left, back_right);
             crowd = new Area(crowd_fl, crowd_fr, crowd_bl, crowd_br);
             FACING = facing;
+            STAGEMOVEMENT = stagemovement;
         }
 
       public BlockPos getCenter() {
@@ -110,7 +112,7 @@ public class Stages {
         AZALEACROWDFR,
         AZALEACROWDBL,
         AZALEACROWDBR,
-            0);
+            0, 2);
 
   public static final BlockPos FLAMINGOSTAGECR = new BlockPos(140, 65, 212);
   public static final BlockPos FLAMINGOSTAGEFL = new BlockPos(132, 68, 219);
@@ -130,7 +132,7 @@ public class Stages {
       FLAMINGOCROWDFR,
       FLAMINGOCROWDBL,
       FLAMINGOCROWDBR,
-          130);
+          130, 2);
 
   public static final BlockPos LINNESTAGECR = new BlockPos(75, 66, 335);
   public static final BlockPos LINNESTAGEFL = new BlockPos(74, 67, 352);
@@ -150,13 +152,13 @@ public class Stages {
       LINNECROWDFR,
       LINNECROWDBL,
       LINNECROWDBR,
-          0);
+          160, 1.2);
 
   public static final BlockPos DUNGENSTAGECR = new BlockPos(161, 65, 43);
-  public static final BlockPos DUNGENSTAGEFL = new BlockPos(165, 67, 30);
-  public static final BlockPos DUNGENSTAGEFR = new BlockPos(161, 67, 33);
-  public static final BlockPos DUNGENSTAGEBL = new BlockPos(164, 67, 28);
-  public static final BlockPos DUNGENSTAGEBR = new BlockPos(160, 67, 32);
+  public static final BlockPos DUNGENSTAGEFL = new BlockPos(164, 67, 31);
+  public static final BlockPos DUNGENSTAGEFR = new BlockPos(162, 67, 34);
+  public static final BlockPos DUNGENSTAGEBL = new BlockPos(164, 67, 31);
+  public static final BlockPos DUNGENSTAGEBR = new BlockPos(162, 67, 34);
   public static final BlockPos DUNGENCROWDFL = new BlockPos(161, 65, 35);
   public static final BlockPos DUNGENCROWDFR = new BlockPos(166, 65, 30);
   public static final BlockPos DUNGENCROWDBL = new BlockPos(166, 65, 42);
@@ -170,6 +172,6 @@ public class Stages {
       DUNGENCROWDFR,
       DUNGENCROWDBL,
       DUNGENCROWDBR,
-          0);
+          -44, 0.5);
 
 }

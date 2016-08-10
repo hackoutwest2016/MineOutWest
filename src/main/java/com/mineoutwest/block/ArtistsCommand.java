@@ -50,9 +50,7 @@ public class ArtistsCommand implements ICommand {
 
         World world = iCommandSender.getEntityWorld();
         String lower = strings[0].toLowerCase();
-        if (lower.equals("spawn")) {
-            Actions.spawnArtistsAzalea(world);
-        } else if (lower.equals("spa")) {
+        if (lower.equals("spa")) {
             Actions.spawnArtistStage(world, Stages.AZALEA);
         } else if (lower.equals("spf")) {
             Actions.spawnArtistStage(world, Stages.FLAMINGO);

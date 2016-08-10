@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
  */
 public class Actions {
 
-    static Artist spawnArtist(World world, double x, double y, double z, int facing) {
+    static Artist spawnArtist(World world, double x, double y, double z, double movement, int facing) {
         BlockPos worldSpawnPoint = new BlockPos(x, y, z);
         Artist villager = new Artist(world);
         villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
@@ -22,28 +22,22 @@ public class Actions {
         villager.setAlwaysRenderNameTag(true);
         world.spawnEntityInWorld(villager);
 
-        villager.getArtistAI().setAllowedRect(x-2, y-2, z-2,
-                x+2, y+2, z+2);
+        villager.getArtistAI().setAllowedRect(x-movement, y-movement, z-movement,
+                x+movement, y+movement, z+movement);
 
         villager.getArtistAI().setFacePitch(facing);
 
         return villager;
     }
 
-    static void spawnArtistsOnLine(World world, double x1, double z1, double x2, double z2, double y, int n, int facing) {
+    static void spawnArtistsOnLine(World world, double x1, double z1, double x2, double z2, double y, double movement, int n, int facing) {
         for(int i = 0; i < n; i++) {
             double x = x1 + (x2 - x1) * (i*2 + 1) / (2*n);
             double z = z1 + (z2 - z1) * (i*2 + 1) / (2*n);
-            spawnArtist(world, x, y, z, facing);
+            spawnArtist(world, x, y, z, movement, facing);
         }
     }
 
-    public static void spawnArtistsAzalea(World world) {
-        spawnArtist(world, 126, 68, 112, 0);
-        spawnArtist(world, 122, 68, 112, 0);
-        spawnArtist(world, 118, 68, 112, 0);
-        spawnArtist(world, 114, 68, 112, 0);
-    }
 
     public static double interpolate(double a, double b, double f) {
         return a + (b - a) * f;
@@ -67,7 +61,9 @@ public class Actions {
 
         Vec3d s1 = interpolate(p1, p2, 0.2);
         Vec3d s2 = interpolate(p1, p2, 0.8);
-        spawnArtistsOnLine(world, s1.xCoord, s1.zCoord, s2.xCoord, s2.zCoord, s1.yCoord, 4, stage.FACING);
+
+        int num = stage == Stages.DUNGEN ? 2 : 4;
+        spawnArtistsOnLine(world, s1.xCoord, s1.zCoord, s2.xCoord, s2.zCoord, s1.yCoord, stage.STAGEMOVEMENT, num, stage.FACING);
     }
 
     public static int killAllArtists(World world) {
