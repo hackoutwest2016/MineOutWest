@@ -75,14 +75,14 @@ public class Stages {
 
   private static final BlockPos FLAMINGOSTAGECR = new BlockPos(140, 65, 212);
   // todo update coorinates
-  private static final BlockPos FLAMINGOSTAGEFL = new BlockPos(99.065, 65, 119.145);
-  private static final BlockPos FLAMINGOSTAGEFR = new BlockPos(137.844, 65, 118.312);
-  private static final BlockPos FLAMINGOSTAGEBL = new BlockPos(84.564, 65, 145.904);
-  private static final BlockPos FLAMINGOSTAGEBR = new BlockPos(144.389, 65, 154.429);
-  private static final BlockPos FLAMINGOCROWDFL = new BlockPos(99.065, 65, 119.145);
-  private static final BlockPos FLAMINGOCROWDFR = new BlockPos(137.844, 65, 118.312);
-  private static final BlockPos FLAMINGOCROWDBL = new BlockPos(84.564, 65, 145.904);
-  private static final BlockPos FLAMINGOCROWDBR = new BlockPos(144.389, 65, 154.429);
+  private static final BlockPos FLAMINGOSTAGEFL = new BlockPos(132, 68, 219);
+  private static final BlockPos FLAMINGOSTAGEFR = new BlockPos(153, 68, 205);
+  private static final BlockPos FLAMINGOSTAGEBL = new BlockPos(132, 68, 231);
+  private static final BlockPos FLAMINGOSTAGEBR = new BlockPos(157, 68, 213);
+  private static final BlockPos FLAMINGOCROWDFL = new BlockPos(149, 65, 201);
+  private static final BlockPos FLAMINGOCROWDFR = new BlockPos(126, 65, 218);
+  private static final BlockPos FLAMINGOCROWDBL = new BlockPos(135, 65, 179);
+  private static final BlockPos FLAMINGOCROWDBR = new BlockPos(111, 65, 194);
   public static final Stage FLAMINGO = new Stage("FLAMINGO",
       FLAMINGOSTAGECR,
       FLAMINGOSTAGEFL,
