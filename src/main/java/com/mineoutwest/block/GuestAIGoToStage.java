@@ -33,7 +33,7 @@ public class GuestAIGoToStage extends EntityAIBase
     {
         this.entity = creatureIn;
         this.speed = speedIn;
-        this.executionChance = 10;//chance;
+        this.executionChance = 50; //chance - higher is more seldom
         this.setMutexBits(1);
     }
 
@@ -73,38 +73,34 @@ public class GuestAIGoToStage extends EntityAIBase
     {
         if (!this.mustUpdate)
         {
-            if (this.entity.getAge() >= 100)
-            {
-                return false;
-            }
-
             if (this.entity.getRNG().nextInt(this.executionChance) != 0)
             {
                 return false;
             }
         }
 
-        Vec3d vec3d = RandomPositionGenerator.findRandomTarget(this.entity, 10, 7);
-        // getNextTarget();
-
-        if (vec3d == null)
-        {
+        if (stage == null) {
             return false;
         }
-        else
-        {
-            if (mMinX >= 0) {
-                this.xPosition = clamp(vec3d.xCoord, mMinX, mMaxX);
-                this.yPosition = clamp(vec3d.yCoord, mMinY, mMaxY);
-                this.zPosition = clamp(vec3d.zCoord, mMinZ, mMaxZ);
-            } else {
-                this.xPosition = vec3d.xCoord;
-                this.yPosition = vec3d.yCoord;
-                this.zPosition = vec3d.zCoord;
-            }
-            this.mustUpdate = false;
-            return true;
+
+        Vec3d vec3d = RandomPositionGenerator.findRandomTarget(this.entity, 3, 3);
+        if (vec3d == null) {
+            return false;
         }
+
+        BlockPos target = new BlockPos(vec3d.xCoord, vec3d.yCoord, vec3d.zCoord);
+        while (!stage.crowd.isPosInArea(target)) {
+            vec3d = RandomPositionGenerator.findRandomTarget(this.entity, 3, 3);
+            if (vec3d == null) {
+                return false;
+            }
+            target = new BlockPos(vec3d.xCoord, vec3d.yCoord, vec3d.zCoord);
+        }
+        this.xPosition = vec3d.xCoord;
+        this.yPosition = vec3d.yCoord;
+        this.zPosition = vec3d.zCoord;
+        this.mustUpdate = false;
+        return true;
     }
 
     /**
