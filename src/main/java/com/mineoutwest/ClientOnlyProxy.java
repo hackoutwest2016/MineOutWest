@@ -2,6 +2,7 @@ package com.mineoutwest;
 
 import com.mineoutwest.block.Artist;
 import net.minecraft.client.renderer.entity.RenderVillager;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 
@@ -41,5 +42,7 @@ public class ClientOnlyProxy extends CommonProxy {
    */
   public void postInit() {
     super.postInit();
+
+    MinecraftForge.EVENT_BUS.register(new RenderGuiHandler());
   }
 }
