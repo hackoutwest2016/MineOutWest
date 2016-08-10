@@ -38,13 +38,13 @@ public class EventConfigParser {
 
       BlockPos pos;
       if (stage.startsWith("Linn")) {
-        pos = Stages.LINNE;
+        pos = Stages.LINNE.getCenter();
       } else if ("Azalea".equals(stage)) {
-        pos = Stages.AZALEA;
+        pos = Stages.AZALEA.getCenter();
       } else if ("Flamingo".equals(stage)) {
-        pos = Stages.FLAMINGO;
+        pos = Stages.FLAMINGO.getCenter();
       } else if ("Dungen".equals(stage)) {
-        pos = Stages.DUNGEN;
+        pos = Stages.DUNGEN.getCenter();
       } else {
         throw new RuntimeException("Unknown stage: " + stage);
       }
