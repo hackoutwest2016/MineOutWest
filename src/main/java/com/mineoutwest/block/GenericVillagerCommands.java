@@ -49,7 +49,9 @@ public class GenericVillagerCommands implements ICommand {
         if (lower.equals("villagers")) {
             for(int i = 0; i < 100; i++) {
                 BlockPos pos = Stages.ALL_STAGES[i % Stages.ALL_STAGES.length].crowd.getMidPoint();
-                Actions.spawnVillager(world, pos.getX(), pos.getY(), pos.getZ());
+                BlockPos pos2 = Stages.ALL_STAGES[(i>>2) % Stages.ALL_STAGES.length].crowd.getMidPoint();
+
+                Actions.spawnVillager(world, (pos.getX() + pos2.getX()) / 2, (pos.getY() + pos2.getY())/2, (pos.getZ() + pos2.getZ())/2);
             }
             return;
         }
