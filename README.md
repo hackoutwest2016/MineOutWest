@@ -21,3 +21,7 @@ To download and convert the necessary music files, and to create the event json 
     $ python lineup.py --lineup lineup.json --sounds sounds --download
     $ mv -f sounds.json sounds ../src/main/resources/assets/mineoutwest/
     $ mv -f events.json ../src/main/resources/
+
+Video
+=====
+https://youtu.be/MVv6T7Z6TZc
