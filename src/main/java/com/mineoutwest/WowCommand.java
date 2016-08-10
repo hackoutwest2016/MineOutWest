@@ -43,7 +43,6 @@ public class WowCommand implements ICommand {
     public void execute(MinecraftServer minecraftServer, ICommandSender iCommandSender, String[] strings) throws CommandException {
         World world = iCommandSender.getEntityWorld();
         world.setWorldTime(0);
-        world.setTotalWorldTime(0);
         iCommandSender.addChatMessage(new TextComponentString("WOW opened!"));
     }
 

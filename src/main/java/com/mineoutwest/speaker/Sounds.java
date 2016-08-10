@@ -69,19 +69,26 @@ public class Sounds {
     }
   }
 
+  private static long lastTick = -1;
+
   public static List<ScheduledSound> getScheduledSound(long worldTime) {
     long normTime = worldTime % 72000; // 3 days
 
     List<ScheduledSound> toPlay = Lists.newArrayList();
-    if (SCHEDULE != null) {
-      for (Sounds.ScheduledSound sound : Sounds.SCHEDULE) {
-        long timeToStart = normTime - sound.getTime();
-        if (timeToStart > 0 && timeToStart < 10*20 && (sound.getLastStarted() == -1 || worldTime - sound.getLastStarted() > 30*20)) {
-          toPlay.add(sound);
-          sound.setLastStarted(worldTime);
+
+    if (normTime != lastTick) {
+      if (SCHEDULE != null) {
+        for (Sounds.ScheduledSound sound : Sounds.SCHEDULE) {
+          if (normTime == sound.getTime()) {
+
+            toPlay.add(sound);
+            sound.setLastStarted(worldTime);
+          }
         }
       }
     }
+    lastTick = normTime;
+
     return toPlay;
   }
 }
