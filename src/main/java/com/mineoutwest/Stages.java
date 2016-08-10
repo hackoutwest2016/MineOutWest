@@ -111,7 +111,6 @@ public class Stages {
             0);
 
   public static final BlockPos FLAMINGOSTAGECR = new BlockPos(140, 65, 212);
-  // todo update coorinates
   public static final BlockPos FLAMINGOSTAGEFL = new BlockPos(132, 68, 219);
   public static final BlockPos FLAMINGOSTAGEFR = new BlockPos(153, 68, 205);
   public static final BlockPos FLAMINGOSTAGEBL = new BlockPos(132, 68, 231);
@@ -132,15 +131,14 @@ public class Stages {
           130);
 
   public static final BlockPos LINNESTAGECR = new BlockPos(75, 66, 335);
-  // todo update coorinates
-  public static final BlockPos LINNESTAGEFL = new BlockPos(99.065, 65, 119.145);
-  public static final BlockPos LINNESTAGEFR = new BlockPos(137.844, 65, 118.312);
-  public static final BlockPos LINNESTAGEBL = new BlockPos(84.564, 65, 145.904);
-  public static final BlockPos LINNESTAGEBR = new BlockPos(144.389, 65, 154.429);
-  public static final BlockPos LINNECROWDFL = new BlockPos(99.065, 65, 119.145);
-  public static final BlockPos LINNECROWDFR = new BlockPos(137.844, 65, 118.312);
-  public static final BlockPos LINNECROWDBL = new BlockPos(84.564, 65, 145.904);
-  public static final BlockPos LINNECROWDBR = new BlockPos(144.389, 65, 154.429);
+  public static final BlockPos LINNESTAGEFL = new BlockPos(74, 67, 352);
+  public static final BlockPos LINNESTAGEFR = new BlockPos(81, 67, 348);
+  public static final BlockPos LINNESTAGEBL = new BlockPos(74, 67, 355);
+  public static final BlockPos LINNESTAGEBR = new BlockPos(82, 67, 352);
+  public static final BlockPos LINNECROWDFL = new BlockPos(81, 65, 346);
+  public static final BlockPos LINNECROWDFR = new BlockPos(69, 65, 351);
+  public static final BlockPos LINNECROWDBL = new BlockPos(86, 65, 334);
+  public static final BlockPos LINNECROWDBR = new BlockPos(60, 65, 351);
   public static final Stage LINNE = new Stage("LINNE",
       LINNESTAGEFL,
       LINNESTAGEFR,
@@ -153,15 +151,14 @@ public class Stages {
           0);
 
   public static final BlockPos DUNGENSTAGECR = new BlockPos(161, 65, 43);
-  // todo update coorinates
-  public static final BlockPos DUNGENSTAGEFL = new BlockPos(99.065, 65, 119.145);
-  public static final BlockPos DUNGENSTAGEFR = new BlockPos(137.844, 65, 118.312);
-  public static final BlockPos DUNGENSTAGEBL = new BlockPos(84.564, 65, 145.904);
-  public static final BlockPos DUNGENSTAGEBR = new BlockPos(144.389, 65, 154.429);
-  public static final BlockPos DUNGENCROWDFL = new BlockPos(99.065, 65, 119.145);
-  public static final BlockPos DUNGENCROWDFR = new BlockPos(137.844, 65, 118.312);
-  public static final BlockPos DUNGENCROWDBL = new BlockPos(84.564, 65, 145.904);
-  public static final BlockPos DUNGENCROWDBR = new BlockPos(144.389, 65, 154.429);
+  public static final BlockPos DUNGENSTAGEFL = new BlockPos(165, 67, 30);
+  public static final BlockPos DUNGENSTAGEFR = new BlockPos(161, 67, 33);
+  public static final BlockPos DUNGENSTAGEBL = new BlockPos(164, 67, 28);
+  public static final BlockPos DUNGENSTAGEBR = new BlockPos(160, 67, 32);
+  public static final BlockPos DUNGENCROWDFL = new BlockPos(161, 65, 35);
+  public static final BlockPos DUNGENCROWDFR = new BlockPos(166, 65, 30);
+  public static final BlockPos DUNGENCROWDBL = new BlockPos(166, 65, 42);
+  public static final BlockPos DUNGENCROWDBR = new BlockPos(171, 65, 36);
   public static final Stage DUNGEN = new Stage("DUNGEN",
       DUNGENSTAGEFL,
       DUNGENSTAGEFR,
