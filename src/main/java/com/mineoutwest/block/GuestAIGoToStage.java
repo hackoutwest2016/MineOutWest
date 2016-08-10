@@ -1,12 +1,10 @@
 package com.mineoutwest.block;
 
+import com.mineoutwest.Stages;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.RandomPositionGenerator;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
-
-import net.minecraft.entity.EntityCreature;
 import net.minecraft.util.math.Vec3d;
 
 /* Guest AI overview:
@@ -19,7 +17,7 @@ import net.minecraft.util.math.Vec3d;
 
 
 
-public class GuestAI extends EntityAIBase
+public class GuestAIGoToStage extends EntityAIBase
 {
     private final EntityCreature entity;
     private double xPosition;
@@ -31,20 +29,16 @@ public class GuestAI extends EntityAIBase
 
     private int mMinX = -1, mMinY, mMinZ;
     private int mMaxX, mMaxY, mMaxZ;
+    
+    private final Stages.Stage pitch;
 
     private int mAlwaysFacePitch = -1, mAlwaysFaceYaw;
 
-    public GuestAI(EntityCreature creatureIn, double speedIn)
-    {
-        this(creatureIn, speedIn, 120);
-    }
-
-    public GuestAI(EntityCreature creatureIn, double speedIn, int chance)
+    public GuestAIGoToStage(EntityCreature creatureIn, Stages.Stage pitch)
     {
         this.entity = creatureIn;
-        this.speed = speedIn;
-        this.executionChance = 10;//chance;
         this.setMutexBits(1);
+        pitch = pitch;
     }
 
     public void setAllowedRect(int minX, int minY, int minZ, int maxX, int maxY, int maxZ) {
