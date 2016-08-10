@@ -121,6 +121,7 @@ public class Actions {
         world.spawnEntityInWorld(guest);
 
         guest.getGuestAI().setStage(stage);
+        guest.getGuestAI().setFacePitch(stage.FACING + 180);
         //guest.getGuestAI().setAllowedRect(x-10, y-10, z-10,
         //        x+10, y+10, z+10);
 
