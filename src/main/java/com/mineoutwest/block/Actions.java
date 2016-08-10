@@ -64,6 +64,10 @@ public class Actions {
 
         int num = stage == Stages.DUNGEN ? 2 : 4;
         spawnArtistsOnLine(world, s1.xCoord, s1.zCoord, s2.xCoord, s2.zCoord, s1.yCoord, stage.STAGEMOVEMENT, num, stage.FACING);
+
+        stage.isSpawned = true;
+        stage.spawnTime = world.getWorldTime();
+
     }
 
     public static int killAllArtists(World world) {
@@ -79,6 +83,8 @@ public class Actions {
         }
         return nKills;
     }
+
+
 
 
     static Guest spawnGuest(World world, int x, int y, int z) {
@@ -102,6 +108,44 @@ public class Actions {
                 guest.setCustomNameTag("Hipster" + count);
             }
         }
+    }
+
+
+    public static void startConcert(long worldTime, String stage) {
+         Stages.Stage s = null;
+        switch(stage.charAt(0)) {
+            case 'D': s = Stages.DUNGEN; break;
+            case 'A': s = Stages.AZALEA; break;
+            case 'F': s = Stages.FLAMINGO; break;
+            case 'L': s = Stages.LINNE; break;
+        }
+        if (s == null)
+            return;
+
+        s.spawnTime = worldTime;
+    }
+
+    public static final int CONCERT_LENGTH = 30 * 20;
+    public static void startStopConcerts(World world) {
+        long worldTime = world.getWorldTime();
+
+        // check whether to expire
+        for (Stages.Stage s : Stages.ALL_STAGES) {
+            if (worldTime > s.spawnTime + CONCERT_LENGTH && s.isSpawned) {
+                killAllArtists(world);
+                for (Stages.Stage ss : Stages.ALL_STAGES)
+                    ss.isSpawned = false;
+                break;
+            }
+        }
+
+        // Check whether to start
+        for (Stages.Stage s : Stages.ALL_STAGES) {
+            if (worldTime >= s.spawnTime && worldTime < s.spawnTime + CONCERT_LENGTH && !s.isSpawned) {
+                spawnArtistStage(world, s);
+            }
+        }
+
     }
 
 }

@@ -1,9 +1,13 @@
 package com.mineoutwest;
 
+import com.google.common.collect.Lists;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Stages {
 
@@ -69,6 +73,9 @@ public class Stages {
         public Area crowd;
         public int FACING;
         public double STAGEMOVEMENT;
+
+        public long spawnTime;
+        public boolean isSpawned;
 
         public Stage(String name,
             BlockPos front_left,
@@ -174,4 +181,6 @@ public class Stages {
       DUNGENCROWDBR,
           -44, 0.5);
 
+
+    public static Stage [] ALL_STAGES = new Stage[] {AZALEA, FLAMINGO, DUNGEN, LINNE};
 }

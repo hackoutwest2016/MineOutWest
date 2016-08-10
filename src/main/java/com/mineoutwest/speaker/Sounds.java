@@ -27,11 +27,13 @@ public class Sounds {
     private final long time;
     private long lastStarted = -1;
     private final BlockPos pos;
+    public final String stage;
 
-    public ScheduledSound(SoundEvent event, long time, BlockPos pos) {
+    public ScheduledSound(SoundEvent event, long time, BlockPos pos, String stage) {
       this.event = event;
       this.time = time;
       this.pos = pos;
+      this.stage = stage;
     }
 
     public SoundEvent getEvent() {
@@ -73,7 +75,6 @@ public class Sounds {
       for (Sounds.ScheduledSound sound : Sounds.SCHEDULE) {
         long timeToStart = normTime - sound.getTime();
         if (timeToStart > 0 && timeToStart < 10*20 && (sound.getLastStarted() == -1 || worldTime - sound.getLastStarted() > 30*20)) {
-
           toPlay.add(sound);
           sound.setLastStarted(worldTime);
         }

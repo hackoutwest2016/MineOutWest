@@ -53,7 +53,7 @@ public class EventConfigParser {
       SoundEvent event = new SoundEvent(location);
       GameRegistry.register(event, location);
 
-      out.add(new Sounds.ScheduledSound(event, tick, pos));
+      out.add(new Sounds.ScheduledSound(event, tick, pos, stage));
     }
 
     return out;
