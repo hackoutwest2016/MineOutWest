@@ -45,7 +45,7 @@ public class Actions {
     static Artist spawnArtist(World world, double x, double y, double z, Stages.Stage stage) {
         BlockPos worldSpawnPoint = new BlockPos(x, y, z);
         Artist villager = new Artist(world);
-        villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
+        villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), stage.FACING, 0);
         if (stage.artistName != null)
             villager.setCustomNameTag(stage.artistName);
         villager.setAlwaysRenderNameTag(true);
@@ -119,7 +119,7 @@ public class Actions {
     static Guest spawnGuest(World world, Stages.Stage stage) {
         BlockPos worldSpawnPoint = stage.crowd.getMidPoint();
         Guest guest = new Guest(world);
-        guest.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
+        guest.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), stage.FACING + 180, 0);
         world.spawnEntityInWorld(guest);
 
         guest.getGuestAI().setStage(stage);
