@@ -23,22 +23,21 @@ public class GuestAIGoToStage extends EntityAIBase
     private double xPosition;
     private double yPosition;
     private double zPosition;
-    private final double speed;
     private int executionChance;
     private boolean mustUpdate;
 
     private int mMinX = -1, mMinY, mMinZ;
     private int mMaxX, mMaxY, mMaxZ;
     
-    private final Stages.Stage pitch;
+    private final Stages.Stage stage;
 
     private int mAlwaysFacePitch = -1, mAlwaysFaceYaw;
 
-    public GuestAIGoToStage(EntityCreature creatureIn, Stages.Stage pitch)
+    public GuestAIGoToStage(EntityCreature creatureIn, Stages.Stage stage_destination)
     {
         this.entity = creatureIn;
         this.setMutexBits(1);
-        pitch = pitch;
+        stage = stage_destination;
     }
 
     public void setAllowedRect(int minX, int minY, int minZ, int maxX, int maxY, int maxZ) {
@@ -113,7 +112,7 @@ public class GuestAIGoToStage extends EntityAIBase
      */
     public void startExecuting()
     {
-        this.entity.getNavigator().tryMoveToXYZ(this.xPosition, this.yPosition, this.zPosition, this.speed);
+        this.entity.getNavigator().tryMoveToXYZ(this.xPosition, this.yPosition, this.zPosition, 0.6);
     }
 
     /**
