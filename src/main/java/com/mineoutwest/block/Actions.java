@@ -55,10 +55,19 @@ public class Actions {
                             interpolate(a.getZ(), b.getZ(), f));
     }
 
+    public static Vec3d interpolate(Vec3d a, Vec3d b, double f) {
+        return new Vec3d(interpolate(a.xCoord, b.xCoord, f),
+                interpolate(a.yCoord, b.yCoord, f),
+                interpolate(a.zCoord, b.zCoord, f));
+    }
+
     public static void spawnArtistStage(World world, Stages.Stage stage) {
-        Vec3d p1 = interpolate(stage.stage.FL, stage.stage.BL, 0.2);
-        Vec3d p2 = interpolate(stage.stage.FR, stage.stage.BR, 0.2);
-        spawnArtistsOnLine(world, p1.xCoord, p1.zCoord, p2.xCoord, p2.zCoord, p1.yCoord, 4, stage.FACING);
+        Vec3d p1 = interpolate(stage.stage.FL, stage.stage.BL, 0.4);
+        Vec3d p2 = interpolate(stage.stage.FR, stage.stage.BR, 0.4);
+
+        Vec3d s1 = interpolate(p1, p2, 0.2);
+        Vec3d s2 = interpolate(p1, p2, 0.8);
+        spawnArtistsOnLine(world, s1.xCoord, s1.zCoord, s2.xCoord, s2.zCoord, s1.yCoord, 4, stage.FACING);
     }
 
     public static int killAllArtists(World world) {

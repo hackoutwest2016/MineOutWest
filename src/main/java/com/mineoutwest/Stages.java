@@ -91,10 +91,12 @@ public class Stages {
     }
 
     public static final BlockPos AZALEASTAGECR = new BlockPos(122, 66, 118);
-    public static final BlockPos AZALEASTAGEFL = new BlockPos(135, 68, 106);
-    public static final BlockPos AZALEASTAGEFR = new BlockPos(110, 68, 106);
+
+    public static final BlockPos AZALEASTAGEFL = new BlockPos(135, 68, 117);
+    public static final BlockPos AZALEASTAGEFR = new BlockPos(110, 68, 117);
     public static final BlockPos AZALEASTAGEBL = new BlockPos(135, 68, 106);
     public static final BlockPos AZALEASTAGEBR = new BlockPos(110, 68, 106);
+
     public static final BlockPos AZALEACROWDFL = new BlockPos(110, 65, 118);
     public static final BlockPos AZALEACROWDFR = new BlockPos(135, 65, 118);
     public static final BlockPos AZALEACROWDBL = new BlockPos(110, 65, 138);
