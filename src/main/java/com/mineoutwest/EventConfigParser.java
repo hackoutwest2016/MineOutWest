@@ -9,8 +9,10 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.mineoutwest.speaker.Sounds;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class EventConfigParser {
@@ -34,36 +36,24 @@ public class EventConfigParser {
       String soundId = o.get("id").getAsString();
       String stage = o.get("stage").getAsString();
 
-      int x, y, z;
+      BlockPos pos;
       if (stage.startsWith("Linn")) {
-        x = 75;
-        y = 66;
-        z = 335;
+        pos = Stages.LINNE;
       } else if ("Azalea".equals(stage)) {
-        x = 122;
-        y = 75;
-        z = 118;
+        pos = Stages.AZALEA;
       } else if ("Flamingo".equals(stage)) {
-        x = 140;
-        y = 65;
-        z = 212;
+        pos = Stages.FLAMINGO;
       } else if ("Dungen".equals(stage)) {
-        x = 161;
-        y = 65;
-        z = 43;
-      } else if (stage.endsWith("jden")) {
-        x = 150;
-        y = 66;
-        z = 220;
+        pos = Stages.DUNGEN;
       } else {
-        throw new RuntimeException("Unknwon stage: " + stage);
+        throw new RuntimeException("Unknown stage: " + stage);
       }
 
       ResourceLocation location = new ResourceLocation("mineoutwest", soundId);
       SoundEvent event = new SoundEvent(location);
       GameRegistry.register(event, location);
 
-      out.add(new Sounds.ScheduledSound(event, tick, x, y, z));
+      out.add(new Sounds.ScheduledSound(event, tick, pos));
     }
 
     return out;

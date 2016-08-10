@@ -1,14 +1,13 @@
-package com.mineoutwest.block;
+package com.mineoutwest.speaker;
 
 
 import java.util.List;
 
-import com.mineoutwest.Sounds;
 import net.minecraft.util.SoundCategory;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-public class MyEventHandler {
+public class SpeakerEventHandler {
 
   @SubscribeEvent
   public void world(TickEvent.WorldTickEvent event) {
@@ -18,7 +17,7 @@ public class MyEventHandler {
       if (worldTime > 0) {
         List<Sounds.ScheduledSound> sounds = Sounds.getScheduledSound(worldTime);
         for (Sounds.ScheduledSound sound : sounds) {
-          event.world.playSound(null, sound.getX(), sound.getY(), sound.getZ(), sound.getEvent(), SoundCategory.MASTER, 5, 1);
+          event.world.playSound(null, sound.getPos(), sound.getEvent(), SoundCategory.MASTER, 5, 1);
           System.out.println("Started sound " + sound + " at " + worldTime);
         }
       }

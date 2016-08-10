@@ -1,4 +1,4 @@
-package com.mineoutwest.block;
+package com.mineoutwest;
 
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAIBase;
@@ -8,6 +8,11 @@ import net.minecraft.util.math.BlockPos;
  * Created by Simon on 2016-08-09.
  */
 public class Stages {
+
+    public static final BlockPos LINNE = new BlockPos(75, 66, 335);
+    public static final BlockPos AZALEA = new BlockPos(122, 66, 118);
+    public static final BlockPos FLAMINGO = new BlockPos(140, 65, 212);
+    public static final BlockPos DUNGEN = new BlockPos(161, 65, 43);
 
     public static class Stage {
         private BlockPos FL;

@@ -1,9 +1,11 @@
-package com.mineoutwest;
+package com.mineoutwest.speaker;
 
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.mineoutwest.EventConfigParser;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
 
 public class Sounds {
 
@@ -24,16 +26,12 @@ public class Sounds {
     private final SoundEvent event;
     private final long time;
     private long lastStarted = -1;
-    private final int x;
-    private final int y;
-    private final int z;
+    private final BlockPos pos;
 
-    public ScheduledSound(SoundEvent event, long time, int x, int y, int z) {
+    public ScheduledSound(SoundEvent event, long time, BlockPos pos) {
       this.event = event;
       this.time = time;
-      this.x = x;
-      this.y = y;
-      this.z = z;
+      this.pos = pos;
     }
 
     public SoundEvent getEvent() {
@@ -44,16 +42,8 @@ public class Sounds {
       return time;
     }
 
-    public int getX() {
-      return x;
-    }
-
-    public int getY() {
-      return y;
-    }
-
-    public int getZ() {
-      return z;
+    public BlockPos getPos() {
+      return pos;
     }
 
     public long getLastStarted() {
@@ -70,9 +60,7 @@ public class Sounds {
               "event=" + event.getRegistryName() +
               ", lastStarted=" + lastStarted +
               ", time=" + time +
-              ", x=" + x +
-              ", y=" + y +
-              ", z=" + z +
+              ", pos=" + pos +
               '}';
     }
   }
