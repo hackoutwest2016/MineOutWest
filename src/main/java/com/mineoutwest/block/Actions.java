@@ -3,6 +3,7 @@ package com.mineoutwest.block;
 import com.google.common.base.Predicate;
 import com.mineoutwest.Stages;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -28,7 +29,16 @@ public class Actions {
     return villager;
   }
 
-  public static int killGenericStandingVillager(World world, final double x, final double y, final double z, final String nametag, final int professionId) {
+    static EntityVillager spawnVillager(World world, double x, double y, double z) {
+        BlockPos worldSpawnPoint = new BlockPos(x, y, z);
+        EntityVillager villager = new EntityVillager(world);
+        villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
+        world.spawnEntityInWorld(villager);
+        return villager;
+    }
+
+
+    public static int killGenericStandingVillager(World world, final double x, final double y, final double z, final String nametag, final int professionId) {
     int nKills = 0;
     for (Entity entity : world.getEntities(GenericStandingVillager.class, new Predicate<GenericStandingVillager>() {
       @Override

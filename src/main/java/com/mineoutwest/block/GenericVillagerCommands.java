@@ -1,5 +1,6 @@
 package com.mineoutwest.block;
 
+import com.mineoutwest.Stages;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
@@ -44,6 +45,14 @@ public class GenericVillagerCommands implements ICommand {
 
         World world = iCommandSender.getEntityWorld();
         String lower = strings[0].toLowerCase();
+
+        if (lower.equals("villagers")) {
+            for(int i = 0; i < 100; i++) {
+                BlockPos pos = Stages.ALL_STAGES[i % Stages.ALL_STAGES.length].crowd.getMidPoint();
+                Actions.spawnVillager(world, pos.getX(), pos.getY(), pos.getZ());
+            }
+            return;
+        }
 
         if (strings.length == 6) {
           int x = Integer.parseInt(strings[1]);
