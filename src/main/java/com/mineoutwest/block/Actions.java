@@ -85,31 +85,43 @@ public class Actions {
     }
 
 
-
-
-    static Guest spawnGuest(World world, int x, int y, int z) {
+    static Guest spawnGuest(World world, int x, int y, int z, Stages.Stage stage) {
         BlockPos worldSpawnPoint = new BlockPos(x, y, z);
         Guest guest = new Guest(world);
         guest.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
         world.spawnEntityInWorld(guest);
 
-        guest.getGuestAI().setAllowedRect(x-10, y-10, z-10,
-                x+10, y+10, z+10);
+        guest.getGuestAI().setStage(stage);
+        //guest.getGuestAI().setAllowedRect(x-10, y-10, z-10,
+        //        x+10, y+10, z+10);
 
         return guest;
     }
 
     public static void spawnGuests(World world) {
         int count = 0;
-        for (int i = 1; i < 100; i++) {
-            for (int j = 1; j < 100; j++) {
-                Guest guest = spawnGuest(world, 126, 68, 112);
+        for (int i = 0; i < 1; i++) {
+            for (int j = 0; j < 1; j++) {
+                Guest guest = spawnGuest(world, 244, 73, 26, Stages.LINNE);
                 count++;
-                guest.setCustomNameTag("Hipster" + count);
+                guest.setCustomNameTag("Hipster " + count);
             }
         }
     }
 
+    public static int killAllGuests(World world) {
+        int nKills = 0;
+        for (Entity entity : world.getEntities(Guest.class, new Predicate<Guest>() {
+            @Override
+            public boolean apply(@Nullable Guest input) {
+                return true;
+            }
+        })) {
+            entity.onKillCommand();
+            nKills++;
+        }
+        return nKills;
+    }
 
     public static void startConcert(long worldTime, String stage) {
          Stages.Stage s = null;

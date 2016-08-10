@@ -3,6 +3,8 @@ package com.mineoutwest;
 import com.mineoutwest.block.Artist;
 import com.mineoutwest.block.ArtistsCommand;
 import com.mineoutwest.speaker.MusicCommand;
+import com.mineoutwest.block.Guest;
+import com.mineoutwest.block.GuestsCommand;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -40,6 +42,8 @@ public class MineOutWest {
     int id =1;
     EntityRegistry.registerModEntity(Artist.class, "Artist", id, this, 80, 1, true);//id is an internal mob id, you can start at 0 and continue adding them up.
     id++;
+    EntityRegistry.registerModEntity(Guest.class, "Guest", id, this, 80, 1, true);//id is an internal mob id, you can start at 0 and continue adding them up.
+    id++;
 
     proxy.init();
   }
@@ -59,6 +63,7 @@ public class MineOutWest {
     event.registerServerCommand(new ArtistsCommand());
     event.registerServerCommand(new MusicCommand());
     event.registerServerCommand(new WowCommand());
+    event.registerServerCommand(new GuestsCommand());
   }
 
 }
