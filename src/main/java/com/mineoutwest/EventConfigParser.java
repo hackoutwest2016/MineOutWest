@@ -35,6 +35,7 @@ public class EventConfigParser {
       long tick = o.get("tick").getAsLong();
       String soundId = o.get("id").getAsString();
       String stage = o.get("stage").getAsString();
+      String artist = o.get("artist").getAsString();
 
       BlockPos pos;
       if (stage.startsWith("Linn")) {
@@ -53,7 +54,7 @@ public class EventConfigParser {
       SoundEvent event = new SoundEvent(location);
       GameRegistry.register(event, location);
 
-      out.add(new Sounds.ScheduledSound(event, tick, pos, stage));
+      out.add(new Sounds.ScheduledSound(event, tick, pos, stage, artist));
     }
 
     return out;

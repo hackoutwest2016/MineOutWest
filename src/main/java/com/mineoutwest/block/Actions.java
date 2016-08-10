@@ -14,11 +14,12 @@ import javax.annotation.Nullable;
  */
 public class Actions {
 
-    static Artist spawnArtist(World world, double x, double y, double z, double movement, int facing) {
+    static Artist spawnArtist(World world, double x, double y, double z, double movement, int facing, String name) {
         BlockPos worldSpawnPoint = new BlockPos(x, y, z);
         Artist villager = new Artist(world);
         villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
-        villager.setCustomNameTag("M83");
+        if (name != null)
+            villager.setCustomNameTag(name);
         villager.setAlwaysRenderNameTag(true);
         world.spawnEntityInWorld(villager);
 
@@ -30,11 +31,11 @@ public class Actions {
         return villager;
     }
 
-    static void spawnArtistsOnLine(World world, double x1, double z1, double x2, double z2, double y, double movement, int n, int facing) {
+    static void spawnArtistsOnLine(World world, double x1, double z1, double x2, double z2, double y, double movement, int n, int facing, String name) {
         for(int i = 0; i < n; i++) {
             double x = x1 + (x2 - x1) * (i*2 + 1) / (2*n);
             double z = z1 + (z2 - z1) * (i*2 + 1) / (2*n);
-            spawnArtist(world, x, y, z, movement, facing);
+            spawnArtist(world, x, y, z, movement, facing, name);
         }
     }
 
@@ -63,7 +64,7 @@ public class Actions {
         Vec3d s2 = interpolate(p1, p2, 0.8);
 
         int num = stage == Stages.DUNGEN ? 2 : 4;
-        spawnArtistsOnLine(world, s1.xCoord, s1.zCoord, s2.xCoord, s2.zCoord, s1.yCoord, stage.STAGEMOVEMENT, num, stage.FACING);
+        spawnArtistsOnLine(world, s1.xCoord, s1.zCoord, s2.xCoord, s2.zCoord, s1.yCoord, stage.STAGEMOVEMENT, num, stage.FACING, stage.artistName);
 
         stage.isSpawned = true;
         stage.spawnTime = world.getWorldTime();
@@ -85,7 +86,7 @@ public class Actions {
     }
 
 
-    static Guest spawnGuest(World world, int x, int y, int z, Stages.Stage stage) {
+    static Guest spawnGuest(World world, Stages.Stage stage) {
         BlockPos worldSpawnPoint = stage.crowd.getMidPoint();
         Guest guest = new Guest(world);
         guest.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
@@ -98,11 +99,11 @@ public class Actions {
         return guest;
     }
 
-    public static void spawnGuests(World world) {
+    public static void spawnGuestsInStage(World world, Stages.Stage stage) {
         int count = 0;
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 15; j++) {
-                Guest guest = spawnGuest(world, 244, 73, 26, Stages.LINNE);
+                Guest guest = spawnGuest(world, stage);
                 count++;
                 guest.setCustomNameTag("Hipster " + count);
             }
@@ -123,8 +124,17 @@ public class Actions {
         return nKills;
     }
 
-    public static void startConcert(long worldTime, String stage) {
-         Stages.Stage s = null;
+    public static void killAllConcerts(World world) {
+        killAllArtists(world);
+        for (Stages.Stage ss : Stages.ALL_STAGES)
+            ss.isSpawned = false;
+
+        killAllGuests(world);
+    }
+
+
+    public static void startConcert(World world, long worldTime, String stage, String artistName) {
+        Stages.Stage s = null;
         switch(stage.charAt(0)) {
             case 'D': s = Stages.DUNGEN; break;
             case 'A': s = Stages.AZALEA; break;
@@ -134,7 +144,11 @@ public class Actions {
         if (s == null)
             return;
 
+        // force re-spawn if artist name changes...
+        if (!artistName.equals(s.artistName) && s.isSpawned)
+            killAllConcerts(world);
         s.spawnTime = worldTime;
+        s.artistName = artistName;
     }
 
     public static final int CONCERT_LENGTH = 30 * 20;
@@ -144,9 +158,7 @@ public class Actions {
         // check whether to expire
         for (Stages.Stage s : Stages.ALL_STAGES) {
             if (worldTime > s.spawnTime + CONCERT_LENGTH && s.isSpawned) {
-                killAllArtists(world);
-                for (Stages.Stage ss : Stages.ALL_STAGES)
-                    ss.isSpawned = false;
+                killAllConcerts(world);
                 break;
             }
         }
@@ -155,6 +167,7 @@ public class Actions {
         for (Stages.Stage s : Stages.ALL_STAGES) {
             if (worldTime >= s.spawnTime && worldTime < s.spawnTime + CONCERT_LENGTH && !s.isSpawned) {
                 spawnArtistStage(world, s);
+                spawnGuestsInStage(world, s);
             }
         }
 

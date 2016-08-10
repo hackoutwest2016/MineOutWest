@@ -76,6 +76,7 @@ public class Stages {
 
         public long spawnTime;
         public boolean isSpawned;
+        public String artistName;
 
         public Stage(String name,
             BlockPos front_left,

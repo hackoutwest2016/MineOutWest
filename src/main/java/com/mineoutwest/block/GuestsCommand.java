@@ -1,5 +1,6 @@
 package com.mineoutwest.block;
 
+import com.mineoutwest.Stages;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
@@ -50,7 +51,7 @@ public class GuestsCommand implements ICommand {
         World world = iCommandSender.getEntityWorld();
         String lower = strings[0].toLowerCase();
         if (lower.equals("spawn")) {
-            Actions.spawnGuests(world);
+            Actions.spawnGuestsInStage(world, Stages.FLAMINGO);
         } else if (lower.equals("kill")) {
             int nKills = Actions.killAllGuests(world);
             if (nKills > 0) {

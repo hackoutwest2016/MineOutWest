@@ -28,12 +28,14 @@ public class Sounds {
     private long lastStarted = -1;
     private final BlockPos pos;
     public final String stage;
+    public final String artist;
 
-    public ScheduledSound(SoundEvent event, long time, BlockPos pos, String stage) {
+    public ScheduledSound(SoundEvent event, long time, BlockPos pos, String stage, String artist) {
       this.event = event;
       this.time = time;
       this.pos = pos;
       this.stage = stage;
+      this.artist = artist;
     }
 
     public SoundEvent getEvent() {

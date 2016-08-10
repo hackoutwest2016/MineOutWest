@@ -21,7 +21,7 @@ public class SpeakerEventHandler {
           event.world.playSound(null, sound.getPos(), sound.getEvent(), SoundCategory.MASTER, 5, 1);
           System.out.println("Started sound " + sound + " at " + worldTime);
 
-            Actions.startConcert(worldTime, sound.stage);
+            Actions.startConcert(event.world, worldTime, sound.stage, sound.artist);
         }
 
         Actions.startStopConcerts(event.world);
