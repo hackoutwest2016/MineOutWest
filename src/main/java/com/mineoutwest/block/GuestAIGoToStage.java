@@ -83,10 +83,21 @@ public class GuestAIGoToStage extends EntityAIBase
             return false;
         }
 
+        BlockPos current = this.entity.getPosition();
+        if (!stage.crowd.isPosInArea(current)) {
+            BlockPos mid = stage.crowd.getMidPoint();
+            this.xPosition = mid.getX();
+            this.yPosition = mid.getY();
+            this.zPosition = mid.getZ();
+            this.mustUpdate = false;
+            return true;
+        }
         Vec3d vec3d = RandomPositionGenerator.findRandomTarget(this.entity, 3, 3);
         if (vec3d == null) {
             return false;
         }
+
+
 
         BlockPos target = new BlockPos(vec3d.xCoord, vec3d.yCoord, vec3d.zCoord);
         while (!stage.crowd.isPosInArea(target)) {
