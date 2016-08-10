@@ -80,7 +80,7 @@ def makeEvents(ogg_folder, lineup):
         last_tick = last[0] * 1000 + last[1] * 1000 / 60
         for ev in sorted_day_events:
             tick = ev[0] * 1000 + ev[1] * 1000 / 60
-            scaled_tick = int(24000 * float(tick - first_tick) / float(last_tick - first_tick))
+            scaled_tick = int(22000 * float(tick - first_tick) / float(last_tick - first_tick))
             artist_safe = safestr(ev[2])
             folder = os.path.join(ogg_folder, artist_safe)
             try:
