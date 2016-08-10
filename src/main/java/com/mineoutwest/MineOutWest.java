@@ -5,6 +5,8 @@ import com.mineoutwest.block.ArtistsCommand;
 import com.mineoutwest.speaker.MusicCommand;
 import com.mineoutwest.block.Guest;
 import com.mineoutwest.block.GuestsCommand;
+import com.mineoutwest.block.GenericStandingVillager;
+import com.mineoutwest.block.GenericVillagerCommands;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -44,6 +46,7 @@ public class MineOutWest {
     id++;
     EntityRegistry.registerModEntity(Guest.class, "Guest", id, this, 80, 1, true);//id is an internal mob id, you can start at 0 and continue adding them up.
     id++;
+    EntityRegistry.registerModEntity(GenericStandingVillager.class, "GenericStandingVillager", id, this, 80, 1, true);//id is an internal mob id, you can start at 0 and continue adding them up.
 
     proxy.init();
   }
@@ -60,6 +63,7 @@ public class MineOutWest {
   @EventHandler
   public void serverLoad(FMLServerStartingEvent event)
   {
+    event.registerServerCommand(new GenericVillagerCommands());
     event.registerServerCommand(new ArtistsCommand());
     event.registerServerCommand(new MusicCommand());
     event.registerServerCommand(new WowCommand());

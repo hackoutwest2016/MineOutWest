@@ -14,6 +14,34 @@ import javax.annotation.Nullable;
  */
 public class Actions {
 
+  static GenericStandingVillager spawnGenericStandingVillager(World world, double x, double y, double z, String nametag, int professionId) {
+    BlockPos worldSpawnPoint = new BlockPos(x, y, z);
+    GenericStandingVillager villager = new GenericStandingVillager(world);
+    villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
+    villager.setProfession(professionId);
+    if (nametag != null) {
+      villager.setCustomNameTag(nametag);
+      villager.setAlwaysRenderNameTag(true);
+    }
+    world.spawnEntityInWorld(villager);
+
+    return villager;
+  }
+
+  public static int killGenericStandingVillager(World world, final double x, final double y, final double z, final String nametag, final int professionId) {
+    int nKills = 0;
+    for (Entity entity : world.getEntities(GenericStandingVillager.class, new Predicate<GenericStandingVillager>() {
+      @Override
+      public boolean apply(@Nullable GenericStandingVillager input) {
+        return input.posX == x && input.posY == y && input.posZ == z && input.getCustomNameTag().equals(nametag) && input.getProfession() == professionId;
+      }
+    })) {
+      entity.onKillCommand();
+      nKills++;
+    }
+    return nKills;
+  }
+
     static Artist spawnArtist(World world, double x, double y, double z, double movement, int facing, String name) {
         BlockPos worldSpawnPoint = new BlockPos(x, y, z);
         Artist villager = new Artist(world);
