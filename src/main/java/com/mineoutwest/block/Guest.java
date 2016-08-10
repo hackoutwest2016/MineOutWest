@@ -13,7 +13,7 @@ public class Guest extends EntityVillager {
 
     @Override
     protected void initEntityAI() {
-        mGuestAIGoToStage = new GuestAIGoToStage(this);
+        mGuestAIGoToStage = new GuestAIGoToStage(this, 0.6D);
         this.tasks.addTask(1, mGuestAIGoToStage);
     }
 

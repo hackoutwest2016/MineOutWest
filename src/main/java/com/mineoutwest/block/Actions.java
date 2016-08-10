@@ -86,7 +86,7 @@ public class Actions {
 
 
     static Guest spawnGuest(World world, int x, int y, int z, Stages.Stage stage) {
-        BlockPos worldSpawnPoint = new BlockPos(x, y, z);
+        BlockPos worldSpawnPoint = stage.crowd.getMidPoint();
         Guest guest = new Guest(world);
         guest.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
         world.spawnEntityInWorld(guest);
@@ -100,8 +100,8 @@ public class Actions {
 
     public static void spawnGuests(World world) {
         int count = 0;
-        for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < 1; j++) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 15; j++) {
                 Guest guest = spawnGuest(world, 244, 73, 26, Stages.LINNE);
                 count++;
                 guest.setCustomNameTag("Hipster " + count);
