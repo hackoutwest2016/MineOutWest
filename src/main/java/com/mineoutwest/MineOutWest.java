@@ -2,6 +2,7 @@ package com.mineoutwest;
 
 import com.mineoutwest.block.Artist;
 import com.mineoutwest.block.ArtistsCommand;
+import com.mineoutwest.speaker.MusicCommand;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -56,6 +57,7 @@ public class MineOutWest {
   public void serverLoad(FMLServerStartingEvent event)
   {
     event.registerServerCommand(new ArtistsCommand());
+    event.registerServerCommand(new MusicCommand());
   }
 
 }
