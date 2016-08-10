@@ -58,6 +58,7 @@ public class MineOutWest {
   {
     event.registerServerCommand(new ArtistsCommand());
     event.registerServerCommand(new MusicCommand());
+    event.registerServerCommand(new WowCommand());
   }
 
 }
