@@ -42,28 +42,30 @@ public class Actions {
     return nKills;
   }
 
-    static Artist spawnArtist(World world, double x, double y, double z, double movement, int facing, String name) {
+    static Artist spawnArtist(World world, double x, double y, double z, Stages.Stage stage) {
         BlockPos worldSpawnPoint = new BlockPos(x, y, z);
         Artist villager = new Artist(world);
         villager.setLocationAndAngles(worldSpawnPoint.getX(), worldSpawnPoint.getY(), worldSpawnPoint.getZ(), 30, 30);
-        if (name != null)
-            villager.setCustomNameTag(name);
+        if (stage.artistName != null)
+            villager.setCustomNameTag(stage.artistName);
         villager.setAlwaysRenderNameTag(true);
         world.spawnEntityInWorld(villager);
 
-        villager.getArtistAI().setAllowedRect(x-movement, y-movement, z-movement,
-                x+movement, y+movement, z+movement);
+        villager.getArtistAI().setAllowedRect(x-stage.STAGEMOVEMENT, y-stage.STAGEMOVEMENT, z-stage.STAGEMOVEMENT,
+                x+stage.STAGEMOVEMENT, y+stage.STAGEMOVEMENT, z+stage.STAGEMOVEMENT);
 
-        villager.getArtistAI().setFacePitch(facing);
+        villager.getArtistAI().setStage(stage);
+
+        villager.getArtistAI().setFacePitch(stage.FACING);
 
         return villager;
     }
 
-    static void spawnArtistsOnLine(World world, double x1, double z1, double x2, double z2, double y, double movement, int n, int facing, String name) {
+    static void spawnArtistsOnLine(World world, double x1, double z1, double x2, double z2, double y, int n, Stages.Stage stage) {
         for(int i = 0; i < n; i++) {
             double x = x1 + (x2 - x1) * (i*2 + 1) / (2*n);
             double z = z1 + (z2 - z1) * (i*2 + 1) / (2*n);
-            spawnArtist(world, x, y, z, movement, facing, name);
+            spawnArtist(world, x, y, z, stage);
         }
     }
 
@@ -92,7 +94,7 @@ public class Actions {
         Vec3d s2 = interpolate(p1, p2, 0.8);
 
         int num = stage == Stages.DUNGEN ? 2 : 4;
-        spawnArtistsOnLine(world, s1.xCoord, s1.zCoord, s2.xCoord, s2.zCoord, s1.yCoord, stage.STAGEMOVEMENT, num, stage.FACING, stage.artistName);
+        spawnArtistsOnLine(world, s1.xCoord, s1.zCoord, s2.xCoord, s2.zCoord, s1.yCoord, num, stage);
 
         stage.isSpawned = true;
         stage.spawnTime = world.getWorldTime();

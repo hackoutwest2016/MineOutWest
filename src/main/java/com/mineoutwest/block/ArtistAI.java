@@ -1,5 +1,6 @@
 package com.mineoutwest.block;
 
+import com.mineoutwest.Stages;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.RandomPositionGenerator;
@@ -19,6 +20,8 @@ public class ArtistAI extends EntityAIBase
     private double mMinX = -1, mMinY, mMinZ;
     private double mMaxX, mMaxY, mMaxZ;
 
+    private Stages.Stage stage;
+
     private int mAlwaysFacePitch, mAlwaysFaceYaw;
 
     public ArtistAI(EntityCreature creatureIn, double speedIn)
@@ -32,6 +35,10 @@ public class ArtistAI extends EntityAIBase
         this.speed = speedIn;
         this.executionChance = 10;//chance;
         this.setMutexBits(1);
+    }
+
+    public void setStage(Stages.Stage stage) {
+        this.stage = stage;
     }
 
     public void setAllowedRect(double minX, double minY, double minZ, double maxX, double maxY, double maxZ) {
@@ -68,6 +75,14 @@ public class ArtistAI extends EntityAIBase
             if (this.entity.getRNG().nextInt(this.executionChance) != 0)
             {
                 return false;
+            }
+        }
+
+        if (stage != null) {
+            BlockPos current = this.entity.getPosition();
+            if (current.getY() < stage.stage.getMidPoint().getY() - 1) {
+                BlockPos mid = stage.stage.getMidPoint();
+                this.entity.setPosition(mid.getX(), mid.getY(), mid.getZ());
             }
         }
 
