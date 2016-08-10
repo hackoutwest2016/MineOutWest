@@ -149,8 +149,8 @@ public class Stages {
   public static final BlockPos LINNESTAGEBR = new BlockPos(82, 67, 352);
   public static final BlockPos LINNECROWDFL = new BlockPos(81, 65, 346);
   public static final BlockPos LINNECROWDFR = new BlockPos(69, 65, 351);
-  public static final BlockPos LINNECROWDBL = new BlockPos(86, 65, 334);
-  public static final BlockPos LINNECROWDBR = new BlockPos(60, 65, 351);
+  public static final BlockPos LINNECROWDBL = new BlockPos(90, 65, 312);
+  public static final BlockPos LINNECROWDBR = new BlockPos(43, 65, 310);
   public static final Stage LINNE = new Stage("LINNE",
       LINNESTAGEFL,
       LINNESTAGEFR,
