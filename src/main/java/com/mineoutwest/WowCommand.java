@@ -109,22 +109,28 @@ public class WowCommand implements ICommand {
           if (strings.length == 1) {
             // give all concerts
             for (Sounds.ScheduledSound concert: this.concerts) {
-              iCommandSender.addChatMessage(new TextComponentString(concert.getEvent().getSoundName().getResourcePath() + " " + concert.artist + " " + concert.stage + " " + concert.getTime()));
+              iCommandSender.addChatMessage(new TextComponentString(concert.artist + " " + concert.stage + " " + concert.getTime()));
             }
           } else {
             // find concert
             System.out.println("Trying to get info about concert");
-            String id_concert = strings[1].toLowerCase();
+            String id_concert = strings[1];
             Sounds.ScheduledSound this_concert = null;
             for (Sounds.ScheduledSound concert: this.concerts) {
-              if (concert.getEvent().getSoundName().getResourcePath().equals(id_concert)){
+
+              // remove whitespace
+              System.out.println("Remove whitespace");
+              System.out.println(concert.artist.replaceAll("\\s",""));
+              System.out.println(id_concert);
+              if ((concert.artist.replaceAll("\\s", "").equals(id_concert))) {
                 this_concert = concert;
               }
+
             }
             if (this_concert != null) {
               System.out.println("Found concert");
               // this is the concert
-              String id = this_concert.getEvent().getSoundName().getResourcePath();
+
               //iCommandSender.addChatMessage(new TextComponentString(id + " " + this_concert.artist + " " + this_concert.stage + " " + this_concert.getTime()));
               EntityPlayer player0 = world.getPlayerEntityByName(iCommandSender.getName());
               if (player0 != null) {
