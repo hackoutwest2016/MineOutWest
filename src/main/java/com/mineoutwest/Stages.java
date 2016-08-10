@@ -52,7 +52,6 @@ public class Stages {
             Vec3i P3 = new Vec3i( P.getX() - p3.getX(), 0.0, P.getZ() - p3.getZ());
             Vec3i P4 = new Vec3i( P.getX() - p4.getX(), 0.0, P.getZ() - p4.getZ());
 
-
             Vec3i C1 = P1.crossProduct(L1);
             Vec3i C2 = P2.crossProduct(L2);
             Vec3i C3 = P3.crossProduct(L3);
@@ -68,6 +67,7 @@ public class Stages {
 
         public Area stage;
         public Area crowd;
+        public int FACING;
 
         public Stage(String name,
             BlockPos front_left,
@@ -77,10 +77,12 @@ public class Stages {
             BlockPos crowd_fl,
             BlockPos crowd_fr,
             BlockPos crowd_bl,
-            BlockPos crowd_br) {
+            BlockPos crowd_br,
+            int facing) {
             NAME = name;
             stage = new Area(front_left, front_right, back_left, back_right);
             crowd = new Area(crowd_fl, crowd_fr, crowd_bl, crowd_br);
+            FACING = facing;
         }
 
       public BlockPos getCenter() {
@@ -105,7 +107,8 @@ public class Stages {
         AZALEACROWDFL,
         AZALEACROWDFR,
         AZALEACROWDBL,
-        AZALEACROWDBR);
+        AZALEACROWDBR,
+            0);
 
   public static final BlockPos FLAMINGOSTAGECR = new BlockPos(140, 65, 212);
   // todo update coorinates
@@ -125,7 +128,8 @@ public class Stages {
       FLAMINGOCROWDFL,
       FLAMINGOCROWDFR,
       FLAMINGOCROWDBL,
-      FLAMINGOCROWDBR);
+      FLAMINGOCROWDBR,
+          130);
 
   public static final BlockPos LINNESTAGECR = new BlockPos(75, 66, 335);
   // todo update coorinates
@@ -145,7 +149,8 @@ public class Stages {
       LINNECROWDFL,
       LINNECROWDFR,
       LINNECROWDBL,
-      LINNECROWDBR);
+      LINNECROWDBR,
+          0);
 
   public static final BlockPos DUNGENSTAGECR = new BlockPos(161, 65, 43);
   // todo update coorinates
@@ -165,6 +170,7 @@ public class Stages {
       DUNGENCROWDFL,
       DUNGENCROWDFR,
       DUNGENCROWDBL,
-      DUNGENCROWDBR);
+      DUNGENCROWDBR,
+          0);
 
 }

@@ -1,5 +1,6 @@
 package com.mineoutwest.block;
 
+import com.mineoutwest.Stages;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
@@ -50,7 +51,15 @@ public class ArtistsCommand implements ICommand {
         World world = iCommandSender.getEntityWorld();
         String lower = strings[0].toLowerCase();
         if (lower.equals("spawn")) {
-            Actions.spawnArtists(world);
+            Actions.spawnArtistsAzalea(world);
+        } else if (lower.equals("spa")) {
+            Actions.spawnArtistStage(world, Stages.AZALEA);
+        } else if (lower.equals("spf")) {
+            Actions.spawnArtistStage(world, Stages.FLAMINGO);
+        } else if (lower.equals("spl")) {
+            Actions.spawnArtistStage(world, Stages.LINNE);
+        } else if (lower.equals("spd")) {
+            Actions.spawnArtistStage(world, Stages.DUNGEN);
         } else if (lower.equals("kill")) {
             int nKills = Actions.killAllArtists(world);
             if (nKills > 0) {

@@ -16,10 +16,10 @@ public class ArtistAI extends EntityAIBase
     private int executionChance;
     private boolean mustUpdate;
 
-    private int mMinX = -1, mMinY, mMinZ;
-    private int mMaxX, mMaxY, mMaxZ;
+    private double mMinX = -1, mMinY, mMinZ;
+    private double mMaxX, mMaxY, mMaxZ;
 
-    private int mAlwaysFacePitch = -1, mAlwaysFaceYaw;
+    private int mAlwaysFacePitch, mAlwaysFaceYaw;
 
     public ArtistAI(EntityCreature creatureIn, double speedIn)
     {
@@ -34,13 +34,17 @@ public class ArtistAI extends EntityAIBase
         this.setMutexBits(1);
     }
 
-    public void setAllowedRect(int minX, int minY, int minZ, int maxX, int maxY, int maxZ) {
+    public void setAllowedRect(double minX, double minY, double minZ, double maxX, double maxY, double maxZ) {
         mMinX = minX;
         mMinY = minY;
         mMinZ = minZ;
         mMaxX = maxX;
         mMaxY = maxY;
         mMaxZ = maxZ;
+    }
+
+    public void setFacePitch(int pitch) {
+        mAlwaysFacePitch = pitch;
     }
 
     public double clamp(double v, double min, double max) {
@@ -97,7 +101,7 @@ public class ArtistAI extends EntityAIBase
         if (!this.entity.getNavigator().noPath())
             return true;
         BlockPos pos = entity.getPosition();
-        entity.setLocationAndAngles(pos.getX(), pos.getY(), pos.getZ(), 0, 0);
+        entity.setLocationAndAngles(pos.getX(), pos.getY(), pos.getZ(), mAlwaysFacePitch, 0);
         return false;
     }
 
