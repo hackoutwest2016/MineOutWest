@@ -89,7 +89,13 @@ public class RenderGuiHandler
 
             int left = 2;
 
-            String text = String.format("WoW Time: %d", worldTime);
+            String day = "Saturday";
+            if (worldTime / 24000 == 0) {
+                day = "Thursday";
+            } else if (worldTime / 24000 == 1) {
+                day = "Friday";
+            }
+            String text = String.format("MoW Time: %d, Day: %s", worldTime, day);
             drawString(mc.fontRendererObj, text, left, (int) (0.05 * height), 0xffaa00);
 
             drawString(mc.fontRendererObj, "Flamingo", left, (int) (0.15 * height), 0xff0050);
