@@ -114,16 +114,13 @@ public class WowCommand implements ICommand {
           } else {
             // find concert
             System.out.println("Trying to get info about concert");
-            String id_concert = strings[1];
+            String id_concert = strings[1].toLowerCase();
             Sounds.ScheduledSound this_concert = null;
             for (Sounds.ScheduledSound concert: this.concerts) {
 
-              // remove whitespace
-              System.out.println("Remove whitespace");
-              System.out.println(concert.artist.replaceAll("\\s",""));
-              System.out.println(id_concert);
-              if ((concert.artist.replaceAll("\\s", "").equals(id_concert))) {
+              if (concert.artist.toLowerCase().indexOf(id_concert) > -1) {
                 this_concert = concert;
+                break;
               }
 
             }
