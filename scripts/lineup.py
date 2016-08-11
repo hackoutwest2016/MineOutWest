@@ -91,15 +91,15 @@ def makeEvents(ogg_folder, lineup):
             # Max two files
             for ix, f in enumerate(files[0:2]):
                 a_id, a_f = f
-                tick_events.append((24000 * d + scaled_tick + 600 * ix, ev[2], a_id, a_f, ev[3]))
+                tick_events.append((24000 * d + scaled_tick + 600 * ix, ev[2], a_id, a_f, ev[3], "%02d.%02d"%(ev[0], ev[1])))
         audio = {}
         events = []
         used_files = []
         for event in sorted(tick_events):
-            tick, artist, a_id, a_f, stage = event
+            tick, artist, a_id, a_f, stage, time_string = event
             name = "mineoutwest:%s"%(a_f[0:-4])
             audio[a_id] = {"category": "record", "sounds": [{"name": name, "stream": True}]}
-            events.append({"tick": tick, "id": a_id, "stage": stage, "artist": artist})
+            events.append({"tick": tick, "id": a_id, "stage": stage, "artist": artist, "time": time_string})
         with open("sounds.json", "wb") as f:
             json.dump(audio, f, sort_keys=True, indent=2, separators=(',', ': '))
         with open("events.json", "wb") as f:

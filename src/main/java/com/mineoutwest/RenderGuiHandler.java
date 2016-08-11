@@ -24,6 +24,7 @@ public class RenderGuiHandler
         public long end;
         public String artist;
         public String stage;
+        public String time;
     }
 
     List<ScheduledArtist> m_schedule;
@@ -45,6 +46,7 @@ public class RenderGuiHandler
             long tick = o.get("tick").getAsLong();
             String stage = o.get("stage").getAsString();
             String artist = o.get("artist").getAsString();
+            String time = o.get("time").getAsString();
             boolean found = false;
             for(ScheduledArtist sa : m_schedule) {
                 if(sa != null && sa.artist.equals(artist)) {
@@ -59,6 +61,7 @@ public class RenderGuiHandler
                 sa.artist = artist;
                 sa.start = tick;
                 sa.end = tick + 600;
+                sa.time = time;
                 m_schedule.add(sa);
             }
         }
@@ -84,27 +87,38 @@ public class RenderGuiHandler
 
             long worldTime = mc.theWorld.getWorldTime() % 72000;
 
-            String text = String.format("WoW Time: %d", worldTime);
-            drawString(mc.fontRendererObj, text, (int) (0.8 * width), (int) (0.1 * height), Integer.parseInt("FFAA00", 16));
+            int left = 2;
 
-            drawString(mc.fontRendererObj, "Flamingo", (int) (0.8 * width), (int) (0.2 * height), Integer.parseInt("FF0050", 16));
-            drawString(mc.fontRendererObj, "Azalea", (int) (0.8 * width), (int) (0.4 * height), Integer.parseInt("FF0050", 16));
-            drawString(mc.fontRendererObj, "Linné", (int) (0.8 * width), (int) (0.6 * height), Integer.parseInt("FF0050", 16));
-            drawString(mc.fontRendererObj, "Dungen", (int) (0.8 * width), (int) (0.8 * height), Integer.parseInt("FF0050", 16));
+            String text = String.format("WoW Time: %d", worldTime);
+            drawString(mc.fontRendererObj, text, left, (int) (0.05 * height), 0xffaa00);
+
+            drawString(mc.fontRendererObj, "Flamingo", left, (int) (0.15 * height), 0xff0050);
+            drawString(mc.fontRendererObj, "Azalea", left, (int) (0.35 * height), 0xff0050);
+            drawString(mc.fontRendererObj, "Linné", left, (int) (0.55 * height), 0xff0050);
+            drawString(mc.fontRendererObj, "Dungen", left, (int) (0.75 * height), 0xff0050);
 
             for (ScheduledArtist a : m_schedule) {
                 if (worldTime >= a.start && worldTime < a.end) {
                     float y = 0.0f;
                     if (a.stage.equals("Flamingo")) {
-                        y = 0.25f;
+                        y = 0.20f;
                     } else if (a.stage.equals("Azalea")) {
-                        y = 0.45f;
+                        y = 0.40f;
                     } else if (a.stage.equals("Linné")) {
-                        y = 0.65f;
+                        y = 0.60f;
                     } else if (a.stage.equals("Dungen")) {
-                        y = 0.85f;
+                        y = 0.80f;
                     }
-                    drawString(mc.fontRendererObj, a.artist, (int) (0.8 * width), (int) (y * height), Integer.parseInt("AAFF00", 16));
+                    drawString(mc.fontRendererObj, a.artist, left, (int) (y * height), 0xaaff00);
+                    drawString(mc.fontRendererObj, String.format("Start: %s", a.time), left, (int) ((y + 0.05) * height), 0xaaff00);
+                    int right = left + (int) (0.2 * width);
+                    int top = (int) ((y + 0.1) * height);
+                    int bottom = top + 4;
+                    drawRect(left, top, right, bottom, 0xa0ffffff);
+                    if (a.start - a.end != 0) {
+                        float progress = (float) (worldTime - a.start) / (a.end - a.start);
+                        drawRect(left + 1, top + 1, left + 1 + (int) (((right - 1) - (left + 1)) * progress), bottom - 1, 0xa0205040);
+                    }
                 }
             }
         }
