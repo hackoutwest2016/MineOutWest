@@ -1,13 +1,13 @@
 [
   {
     "artist": "Ishivu",
-    "id": "ishivu_gryning",
+    "id": "ishivu_skymning",
     "stage": "Dungen",
-    "tick": 10
+    "tick": 0
   },
   {
     "artist": "Ishivu",
-    "id": "ishivu_skymning",
+    "id": "ishivu_gryning",
     "stage": "Dungen",
     "tick": 600
   },
@@ -15,203 +15,203 @@
     "artist": "Basia Bulat",
     "id": "basia_bulat_fool",
     "stage": "Linn\u00e9",
-    "tick": 1419
+    "tick": 838
   },
   {
     "artist": "Basia Bulat",
     "id": "basia_bulat_infamous",
     "stage": "Linn\u00e9",
-    "tick": 2019
+    "tick": 1438
   },
   {
     "artist": "TalaBoman (John Talabot & Axel Boman)",
     "id": "talaboman__john_talabot___axel_boman__destiny_feat__pional",
     "stage": "Dungen",
-    "tick": 2838
-  },
-  {
-    "artist": "TalaBoman (John Talabot & Axel Boman)",
-    "id": "talaboman__john_talabot___axel_boman__sideral_feat__john_talabot__axel_boman___original_mix",
-    "stage": "Dungen",
-    "tick": 3438
+    "tick": 1677
   },
   {
     "artist": "Jason Isbell",
     "id": "jason_isbell_cover_me_up",
     "stage": "Azalea",
-    "tick": 3784
+    "tick": 2236
+  },
+  {
+    "artist": "TalaBoman (John Talabot & Axel Boman)",
+    "id": "talaboman__john_talabot___axel_boman__sideral_feat__john_talabot__axel_boman___original_mix",
+    "stage": "Dungen",
+    "tick": 2277
   },
   {
     "artist": "Jason Isbell",
     "id": "jason_isbell_something_more_than_free",
     "stage": "Azalea",
-    "tick": 4384
-  },
-  {
-    "artist": "Daughter",
-    "id": "daughter_smother",
-    "stage": "Linn\u00e9",
-    "tick": 5203
+    "tick": 2836
   },
   {
     "artist": "Daughter",
     "id": "daughter_youth",
     "stage": "Linn\u00e9",
-    "tick": 5803
+    "tick": 3074
   },
   {
-    "artist": "M83",
-    "id": "m83_do_it__try_it",
-    "stage": "Flamingo",
-    "tick": 6858
+    "artist": "Daughter",
+    "id": "daughter_smother",
+    "stage": "Linn\u00e9",
+    "tick": 3674
   },
   {
     "artist": "M83",
     "id": "m83_solitude",
     "stage": "Flamingo",
-    "tick": 7458
+    "tick": 4052
   },
   {
-    "artist": "Laura Mvula",
-    "id": "laura_mvula_overcome",
-    "stage": "Linn\u00e9",
-    "tick": 9225
+    "artist": "M83",
+    "id": "m83_do_it__try_it",
+    "stage": "Flamingo",
+    "tick": 4652
   },
   {
     "artist": "Laura Mvula",
     "id": "laura_mvula_phenomenal_woman",
     "stage": "Linn\u00e9",
-    "tick": 9825
+    "tick": 5451
   },
   {
-    "artist": "Chvrches",
-    "id": "chvrches_leave_a_trace",
-    "stage": "Azalea",
-    "tick": 10406
-  },
-  {
-    "artist": "Paula Temple",
-    "id": "paula_temple_gegen",
-    "stage": "Dungen",
-    "tick": 10645
+    "artist": "Laura Mvula",
+    "id": "laura_mvula_overcome",
+    "stage": "Linn\u00e9",
+    "tick": 6051
   },
   {
     "artist": "Chvrches",
     "id": "chvrches_the_mother_we_share",
     "stage": "Azalea",
-    "tick": 11006
+    "tick": 6149
   },
   {
     "artist": "Paula Temple",
     "id": "paula_temple_oscillate",
     "stage": "Dungen",
-    "tick": 11245
+    "tick": 6290
   },
   {
-    "artist": "Anna von Hausswolff",
-    "id": "anna_von_hausswolff_discovery",
-    "stage": "Linn\u00e9",
-    "tick": 13245
+    "artist": "Chvrches",
+    "id": "chvrches_leave_a_trace",
+    "stage": "Azalea",
+    "tick": 6749
   },
   {
-    "artist": "The Last Shadow Puppets",
-    "id": "the_last_shadow_puppets_everything_you_ve_come_to_expect",
-    "stage": "Flamingo",
-    "tick": 13483
+    "artist": "Paula Temple",
+    "id": "paula_temple_gegen",
+    "stage": "Dungen",
+    "tick": 6890
   },
   {
     "artist": "Anna von Hausswolff",
     "id": "anna_von_hausswolff_mountains_crave",
     "stage": "Linn\u00e9",
-    "tick": 13845
+    "tick": 7826
+  },
+  {
+    "artist": "The Last Shadow Puppets",
+    "id": "the_last_shadow_puppets_everything_you_ve_come_to_expect",
+    "stage": "Flamingo",
+    "tick": 7967
+  },
+  {
+    "artist": "Anna von Hausswolff",
+    "id": "anna_von_hausswolff_discovery",
+    "stage": "Linn\u00e9",
+    "tick": 8426
   },
   {
     "artist": "The Last Shadow Puppets",
     "id": "the_last_shadow_puppets_miracle_aligner",
     "stage": "Flamingo",
-    "tick": 14083
-  },
-  {
-    "artist": "The Libertines",
-    "id": "the_libertines_can_t_stand_me_now",
-    "stage": "Azalea",
-    "tick": 17032
+    "tick": 8567
   },
   {
     "artist": "The Libertines",
     "id": "the_libertines_don_t_look_back_into_the_sun",
     "stage": "Azalea",
-    "tick": 17632
+    "tick": 10064
   },
   {
     "artist": "Chelsea Wolfe",
     "id": "chelsea_wolfe_hypnos",
     "stage": "Linn\u00e9",
-    "tick": 17741
+    "tick": 10483
   },
   {
     "artist": "Kablam",
     "id": "kablam_arch",
     "stage": "Dungen",
-    "tick": 17741
+    "tick": 10483
+  },
+  {
+    "artist": "The Libertines",
+    "id": "the_libertines_can_t_stand_me_now",
+    "stage": "Azalea",
+    "tick": 10664
   },
   {
     "artist": "Chelsea Wolfe",
     "id": "chelsea_wolfe_iron_moon",
     "stage": "Linn\u00e9",
-    "tick": 18341
+    "tick": 11083
   },
   {
     "artist": "Kablam",
     "id": "kablam_crisis",
     "stage": "Dungen",
-    "tick": 18341
-  },
-  {
-    "artist": "Morrissey",
-    "id": "morrissey_everyday_is_like_sunday___2011_remastered_version",
-    "stage": "Flamingo",
-    "tick": 20580
+    "tick": 11083
   },
   {
     "artist": "Morrissey",
     "id": "morrissey_the_first_of_the_gang_to_die",
     "stage": "Flamingo",
-    "tick": 21180
+    "tick": 12161
   },
   {
     "artist": "Josefine Hellstr\u00f6m Hansson",
     "id": "josefine_hellstr_m_hansson_sensus",
     "stage": "Dungen",
-    "tick": 21290
+    "tick": 12580
   },
   {
-    "artist": "Josefine Hellstr\u00f6m Hansson",
-    "id": "josefine_hellstr_m_hansson_water_cave",
-    "stage": "Dungen",
-    "tick": 21890
-  },
-  {
-    "artist": "Kaytranada",
-    "id": "kaytranada_glowed_up",
-    "stage": "Linn\u00e9",
-    "tick": 22000
+    "artist": "Morrissey",
+    "id": "morrissey_everyday_is_like_sunday___2011_remastered_version",
+    "stage": "Flamingo",
+    "tick": 12761
   },
   {
     "artist": "Kaytranada",
     "id": "kaytranada_got_it_good",
     "stage": "Linn\u00e9",
-    "tick": 22600
+    "tick": 13000
+  },
+  {
+    "artist": "Josefine Hellstr\u00f6m Hansson",
+    "id": "josefine_hellstr_m_hansson_water_cave",
+    "stage": "Dungen",
+    "tick": 13180
+  },
+  {
+    "artist": "Kaytranada",
+    "id": "kaytranada_glowed_up",
+    "stage": "Linn\u00e9",
+    "tick": 13600
   },
   {
     "artist": "PURPURR PURPLE",
-    "id": "purpurr_purple_fl_yel__purpurrpurple_remix_",
+    "id": "purpurr_purple_packing_light",
     "stage": "Dungen",
     "tick": 24000
   },
   {
     "artist": "PURPURR PURPLE",
-    "id": "purpurr_purple_packing_light",
+    "id": "purpurr_purple_fl_yel__purpurrpurple_remix_",
     "stage": "Dungen",
     "tick": 24600
   },
@@ -219,205 +219,205 @@
     "artist": "Erik Lundin",
     "id": "erik_lundin_annie_l__f",
     "stage": "Linn\u00e9",
-    "tick": 25500
+    "tick": 24886
   },
   {
     "artist": "Erik Lundin",
     "id": "erik_lundin_suedi",
     "stage": "Linn\u00e9",
-    "tick": 26100
+    "tick": 25486
   },
   {
     "artist": "Samo DJ",
     "id": "samo_dj_hollabackboi",
     "stage": "Dungen",
-    "tick": 27000
-  },
-  {
-    "artist": "Anderson .Paak & The Free Nationals",
-    "id": "anderson__paak___the_free_nationals_am_i_wrong",
-    "stage": "Azalea",
-    "tick": 27500
-  },
-  {
-    "artist": "Samo DJ",
-    "id": "samo_dj_tai_po_kau___mixed",
-    "stage": "Dungen",
-    "tick": 27600
+    "tick": 25772
   },
   {
     "artist": "Anderson .Paak & The Free Nationals",
     "id": "anderson__paak___the_free_nationals_room_in_here",
     "stage": "Azalea",
-    "tick": 28100
+    "tick": 26068
   },
   {
-    "artist": "James Bay",
-    "id": "james_bay_hold_back_the_river",
-    "stage": "Flamingo",
-    "tick": 30000
+    "artist": "Samo DJ",
+    "id": "samo_dj_tai_po_kau___mixed",
+    "stage": "Dungen",
+    "tick": 26372
   },
   {
-    "artist": "Kamasi Washington",
-    "id": "kamasi_washington_askim",
-    "stage": "Linn\u00e9",
-    "tick": 30000
+    "artist": "Anderson .Paak & The Free Nationals",
+    "id": "anderson__paak___the_free_nationals_am_i_wrong",
+    "stage": "Azalea",
+    "tick": 26668
   },
   {
     "artist": "James Bay",
     "id": "james_bay_let_it_go",
     "stage": "Flamingo",
-    "tick": 30600
+    "tick": 27545
   },
   {
     "artist": "Kamasi Washington",
     "id": "kamasi_washington_change_of_the_guard",
     "stage": "Linn\u00e9",
-    "tick": 30600
+    "tick": 27545
   },
   {
-    "artist": "Floating Points",
-    "id": "floating_points_nuits_sonores",
-    "stage": "Dungen",
-    "tick": 31500
+    "artist": "James Bay",
+    "id": "james_bay_hold_back_the_river",
+    "stage": "Flamingo",
+    "tick": 28145
+  },
+  {
+    "artist": "Kamasi Washington",
+    "id": "kamasi_washington_askim",
+    "stage": "Linn\u00e9",
+    "tick": 28145
   },
   {
     "artist": "Floating Points",
     "id": "floating_points_silhouettes__i__ii___iii_",
     "stage": "Dungen",
-    "tick": 32100
+    "tick": 28431
   },
   {
     "artist": "G-Eazy",
     "id": "g_eazy_me__myself___i",
     "stage": "Azalea",
-    "tick": 32500
+    "tick": 29022
   },
   {
-    "artist": "Julia Holter",
-    "id": "julia_holter_feel_you",
-    "stage": "Linn\u00e9",
-    "tick": 33000
-  },
-  {
-    "artist": "G-Eazy",
-    "id": "g_eazy_order_more",
-    "stage": "Azalea",
-    "tick": 33100
+    "artist": "Floating Points",
+    "id": "floating_points_nuits_sonores",
+    "stage": "Dungen",
+    "tick": 29031
   },
   {
     "artist": "Julia Holter",
     "id": "julia_holter_sea_calls_me_home",
     "stage": "Linn\u00e9",
-    "tick": 33600
+    "tick": 29318
+  },
+  {
+    "artist": "G-Eazy",
+    "id": "g_eazy_order_more",
+    "stage": "Azalea",
+    "tick": 29622
+  },
+  {
+    "artist": "Julia Holter",
+    "id": "julia_holter_feel_you",
+    "stage": "Linn\u00e9",
+    "tick": 29918
   },
   {
     "artist": "Grace Jones",
     "id": "grace_jones_libertango",
     "stage": "Flamingo",
-    "tick": 34666
+    "tick": 30302
   },
   {
     "artist": "Grace Jones",
     "id": "grace_jones_pull_up_to_the_bumper",
     "stage": "Flamingo",
-    "tick": 35266
-  },
-  {
-    "artist": "Aurora",
-    "id": "aurora_conqueror",
-    "stage": "Linn\u00e9",
-    "tick": 36000
+    "tick": 30902
   },
   {
     "artist": "Aurora",
     "id": "aurora_half_the_world_away",
     "stage": "Linn\u00e9",
-    "tick": 36600
+    "tick": 31090
   },
   {
-    "artist": "Zara Larsson",
-    "id": "zara_larsson_lush_life",
-    "stage": "Azalea",
-    "tick": 37332
+    "artist": "Aurora",
+    "id": "aurora_conqueror",
+    "stage": "Linn\u00e9",
+    "tick": 31690
   },
   {
     "artist": "Zara Larsson",
     "id": "zara_larsson_never_forget_you",
     "stage": "Azalea",
-    "tick": 37932
-  },
-  {
-    "artist": "Sevdaliza",
-    "id": "sevdaliza_marilyn_monroe",
-    "stage": "Dungen",
-    "tick": 38000
+    "tick": 31878
   },
   {
     "artist": "Sevdaliza",
     "id": "sevdaliza_that_other_girl",
     "stage": "Dungen",
-    "tick": 38600
+    "tick": 32272
+  },
+  {
+    "artist": "Zara Larsson",
+    "id": "zara_larsson_lush_life",
+    "stage": "Azalea",
+    "tick": 32478
   },
   {
     "artist": "Nicole Saboun\u00e9",
     "id": "nicole_saboun__conquer_or_suffer",
     "stage": "Linn\u00e9",
-    "tick": 39000
+    "tick": 32863
   },
   {
-    "artist": "Nicole Saboun\u00e9",
-    "id": "nicole_saboun__i_surrender",
-    "stage": "Linn\u00e9",
-    "tick": 39600
-  },
-  {
-    "artist": "The Tallest Man On Earth",
-    "id": "the_tallest_man_on_earth_i_won_t_be_found",
-    "stage": "Flamingo",
-    "tick": 39666
+    "artist": "Sevdaliza",
+    "id": "sevdaliza_marilyn_monroe",
+    "stage": "Dungen",
+    "tick": 32872
   },
   {
     "artist": "The Tallest Man On Earth",
     "id": "the_tallest_man_on_earth_king_of_spain",
     "stage": "Flamingo",
-    "tick": 40266
+    "tick": 33257
   },
   {
-    "artist": "ANOHNI",
-    "id": "anohni_4_degrees",
-    "stage": "Azalea",
-    "tick": 42000
-  },
-  {
-    "artist": "Hurula",
-    "id": "hurula_ont_som_jag",
+    "artist": "Nicole Saboun\u00e9",
+    "id": "nicole_saboun__i_surrender",
     "stage": "Linn\u00e9",
-    "tick": 42332
+    "tick": 33463
+  },
+  {
+    "artist": "The Tallest Man On Earth",
+    "id": "the_tallest_man_on_earth_i_won_t_be_found",
+    "stage": "Flamingo",
+    "tick": 33857
   },
   {
     "artist": "ANOHNI",
     "id": "anohni_drone_bomb_me",
     "stage": "Azalea",
-    "tick": 42600
+    "tick": 34636
   },
   {
     "artist": "Hurula",
     "id": "hurula_sand",
     "stage": "Linn\u00e9",
-    "tick": 42932
+    "tick": 34832
+  },
+  {
+    "artist": "ANOHNI",
+    "id": "anohni_4_degrees",
+    "stage": "Azalea",
+    "tick": 35236
+  },
+  {
+    "artist": "Hurula",
+    "id": "hurula_ont_som_jag",
+    "stage": "Linn\u00e9",
+    "tick": 35432
   },
   {
     "artist": "Shakarchi & Stran\u00e9us",
     "id": "shakarchi___stran_us_clinton_hill___original_mix",
     "stage": "Dungen",
-    "tick": 43500
+    "tick": 35522
   },
   {
     "artist": "Shakarchi & Stran\u00e9us",
     "id": "shakarchi___stran_us_mogadishu___original_mix",
     "stage": "Dungen",
-    "tick": 44100
+    "tick": 36122
   },
   {
     "artist": "Mai Nestor",
@@ -429,246 +429,246 @@
     "artist": "Daniel Norgren",
     "id": "daniel_norgren_whatever_turns_you_on",
     "stage": "Linn\u00e9",
-    "tick": 49500
+    "tick": 48886
   },
   {
     "artist": "Daniel Norgren",
     "id": "daniel_norgren_why_may_i_not_go_out_and_climb_the_trees_",
     "stage": "Linn\u00e9",
-    "tick": 50100
+    "tick": 49486
   },
   {
     "artist": "Eagles of Death Metal",
     "id": "eagles_of_death_metal_miss_alissa",
     "stage": "Azalea",
-    "tick": 52000
+    "tick": 50363
   },
   {
     "artist": "Audur",
     "id": "audur_south_america",
     "stage": "Dungen",
-    "tick": 52500
+    "tick": 50659
   },
   {
     "artist": "Eagles of Death Metal",
     "id": "eagles_of_death_metal_save_a_prayer",
     "stage": "Azalea",
-    "tick": 52600
-  },
-  {
-    "artist": "Beth Orton",
-    "id": "beth_orton_1973",
-    "stage": "Linn\u00e9",
-    "tick": 53500
+    "tick": 50963
   },
   {
     "artist": "Beth Orton",
     "id": "beth_orton_ooh_child___alternate_version",
     "stage": "Linn\u00e9",
-    "tick": 54100
+    "tick": 51250
   },
   {
     "artist": "Ane Brun",
     "id": "ane_brun_black_notebook",
     "stage": "Flamingo",
-    "tick": 54332
+    "tick": 51741
+  },
+  {
+    "artist": "Beth Orton",
+    "id": "beth_orton_1973",
+    "stage": "Linn\u00e9",
+    "tick": 51850
   },
   {
     "artist": "Ane Brun",
     "id": "ane_brun_true_colors",
     "stage": "Flamingo",
-    "tick": 54932
-  },
-  {
-    "artist": "Nao",
-    "id": "nao_bad_blood",
-    "stage": "Dungen",
-    "tick": 55500
+    "tick": 52341
   },
   {
     "artist": "Nao",
     "id": "nao_girlfriend",
     "stage": "Dungen",
-    "tick": 56100
+    "tick": 52431
   },
   {
-    "artist": "Deportees",
-    "id": "deportees_islands___shores",
-    "stage": "Azalea",
-    "tick": 56832
-  },
-  {
-    "artist": "Jack Garratt",
-    "id": "jack_garratt_surprise_yourself",
-    "stage": "Linn\u00e9",
-    "tick": 57000
+    "artist": "Nao",
+    "id": "nao_bad_blood",
+    "stage": "Dungen",
+    "tick": 53031
   },
   {
     "artist": "Deportees",
     "id": "deportees_love_me_like_i_m_gone",
     "stage": "Azalea",
-    "tick": 57432
+    "tick": 53218
+  },
+  {
+    "artist": "Jack Garratt",
+    "id": "jack_garratt_surprise_yourself",
+    "stage": "Linn\u00e9",
+    "tick": 53318
+  },
+  {
+    "artist": "Deportees",
+    "id": "deportees_islands___shores",
+    "stage": "Azalea",
+    "tick": 53818
   },
   {
     "artist": "Jack Garratt",
     "id": "jack_garratt_worry",
     "stage": "Linn\u00e9",
-    "tick": 57600
+    "tick": 53918
   },
   {
     "artist": "Mura Masa",
     "id": "mura_masa_firefly",
     "stage": "Dungen",
-    "tick": 58500
-  },
-  {
-    "artist": "Mura Masa",
-    "id": "mura_masa_what_if_i_go_",
-    "stage": "Dungen",
-    "tick": 59100
+    "tick": 54204
   },
   {
     "artist": "Big Sean",
     "id": "big_sean_blessings",
     "stage": "Flamingo",
-    "tick": 59332
+    "tick": 54696
   },
   {
-    "artist": "Big Sean",
-    "id": "big_sean_i_don_t_fuck_with_you",
-    "stage": "Flamingo",
-    "tick": 59932
+    "artist": "Mura Masa",
+    "id": "mura_masa_what_if_i_go_",
+    "stage": "Dungen",
+    "tick": 54804
   },
   {
     "artist": "Descendents",
     "id": "descendents_hope",
     "stage": "Linn\u00e9",
-    "tick": 60000
+    "tick": 55090
   },
   {
-    "artist": "Descendents",
-    "id": "descendents_i_m_the_one",
-    "stage": "Linn\u00e9",
-    "tick": 60600
+    "artist": "Big Sean",
+    "id": "big_sean_i_don_t_fuck_with_you",
+    "stage": "Flamingo",
+    "tick": 55296
   },
   {
     "artist": "Kenton Slash Demon",
     "id": "kenton_slash_demon_harpe",
     "stage": "Dungen",
-    "tick": 61000
+    "tick": 55681
+  },
+  {
+    "artist": "Descendents",
+    "id": "descendents_i_m_the_one",
+    "stage": "Linn\u00e9",
+    "tick": 55690
   },
   {
     "artist": "Jamie xx",
     "id": "jamie_xx_gosh",
     "stage": "Azalea",
-    "tick": 61500
+    "tick": 55977
   },
   {
     "artist": "Kenton Slash Demon",
     "id": "kenton_slash_demon_sun",
     "stage": "Dungen",
-    "tick": 61600
+    "tick": 56281
   },
   {
     "artist": "Jamie xx",
     "id": "jamie_xx_loud_places",
     "stage": "Azalea",
-    "tick": 62100
-  },
-  {
-    "artist": "Stormzy",
-    "id": "stormzy_know_me_from",
-    "stage": "Linn\u00e9",
-    "tick": 63000
+    "tick": 56577
   },
   {
     "artist": "Stormzy",
     "id": "stormzy_shut_up___studio_version",
     "stage": "Linn\u00e9",
-    "tick": 63600
+    "tick": 56863
+  },
+  {
+    "artist": "Stormzy",
+    "id": "stormzy_know_me_from",
+    "stage": "Linn\u00e9",
+    "tick": 57463
   },
   {
     "artist": "Seinabo Sey",
     "id": "seinabo_sey_poetic",
     "stage": "Flamingo",
-    "tick": 64500
-  },
-  {
-    "artist": "Toxe",
-    "id": "toxe_determina",
-    "stage": "Dungen",
-    "tick": 64500
-  },
-  {
-    "artist": "Seinabo Sey",
-    "id": "seinabo_sey_younger",
-    "stage": "Flamingo",
-    "tick": 65100
+    "tick": 57750
   },
   {
     "artist": "Toxe",
     "id": "toxe_let_me_thru",
     "stage": "Dungen",
-    "tick": 65100
+    "tick": 57750
   },
   {
-    "artist": "Travi$ Scott",
-    "id": "travi__scott_90210",
-    "stage": "Linn\u00e9",
-    "tick": 65666
+    "artist": "Seinabo Sey",
+    "id": "seinabo_sey_younger",
+    "stage": "Flamingo",
+    "tick": 58350
+  },
+  {
+    "artist": "Toxe",
+    "id": "toxe_determina",
+    "stage": "Dungen",
+    "tick": 58350
   },
   {
     "artist": "Travi$ Scott",
     "id": "travi__scott_antidote",
     "stage": "Linn\u00e9",
-    "tick": 66266
+    "tick": 58439
+  },
+  {
+    "artist": "Travi$ Scott",
+    "id": "travi__scott_90210",
+    "stage": "Linn\u00e9",
+    "tick": 59039
   },
   {
     "artist": "Massive Attack & Young Fathers",
     "id": "massive_attack___young_fathers_teardrop",
     "stage": "Azalea",
-    "tick": 67332
-  },
-  {
-    "artist": "Johanna Knutsson",
-    "id": "johanna_knutsson_bruten",
-    "stage": "Dungen",
-    "tick": 67500
-  },
-  {
-    "artist": "Massive Attack & Young Fathers",
-    "id": "massive_attack___young_fathers_voodoo_in_my_blood",
-    "stage": "Azalea",
-    "tick": 67932
+    "tick": 59423
   },
   {
     "artist": "Johanna Knutsson",
     "id": "johanna_knutsson_heavy_baby___original_mix",
     "stage": "Dungen",
-    "tick": 68100
+    "tick": 59522
   },
   {
-    "artist": "SIA",
-    "id": "sia_chandelier",
-    "stage": "Flamingo",
-    "tick": 70000
+    "artist": "Massive Attack & Young Fathers",
+    "id": "massive_attack___young_fathers_voodoo_in_my_blood",
+    "stage": "Azalea",
+    "tick": 60023
   },
   {
-    "artist": "Skepta",
-    "id": "skepta_ladies_hit_squad",
-    "stage": "Linn\u00e9",
-    "tick": 70000
+    "artist": "Johanna Knutsson",
+    "id": "johanna_knutsson_bruten",
+    "stage": "Dungen",
+    "tick": 60122
   },
   {
     "artist": "SIA",
     "id": "sia_cheap_thrills",
     "stage": "Flamingo",
-    "tick": 70600
+    "tick": 61000
+  },
+  {
+    "artist": "Skepta",
+    "id": "skepta_ladies_hit_squad",
+    "stage": "Linn\u00e9",
+    "tick": 61000
+  },
+  {
+    "artist": "SIA",
+    "id": "sia_chandelier",
+    "stage": "Flamingo",
+    "tick": 61600
   },
   {
     "artist": "Skepta",
     "id": "skepta_shutdown",
     "stage": "Linn\u00e9",
-    "tick": 70600
+    "tick": 61600
   }
 ]
